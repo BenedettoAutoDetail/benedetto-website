@@ -3,7 +3,11 @@ import React from "react";
 
 function ServiceCard({ image = "", title = "", description = "", url = "" }) {
   return (
-    <div className="card bg-red-500 w-full flex flex-col" key={title}>
+    <div
+      data-aos="fade-up"
+      className="card bg-red-500 w-full flex flex-col shadow-xl"
+      key={title}
+    >
       <figure className="h-1/2">
         <img src={image} alt="car!" className="h-full w-full object-cover" />
       </figure>

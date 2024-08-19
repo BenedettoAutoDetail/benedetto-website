@@ -39,7 +39,7 @@ function Navbar() {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 text-red-500"
+              className="h-5 w-5 text-red-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -47,7 +47,7 @@ function Navbar() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth="3"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
@@ -100,30 +100,30 @@ function Navbar() {
       <div className="navbar-center hidden lg:flex font-semibold">
         <ul className="menu menu-horizontal px-1 text-red-500">
           <li>
-            <Link href={"/"} className="me-1">Home</Link>
+            <Link href={"/"} className="me-1 w-full">Home</Link>
           </li>
           <li>
-            <Link href={"/about-us"}>About Us</Link>
+            <Link href={"/about-us"} className="w-full">About Us</Link>
           </li>
           <li>
             <details ref={detailsRef}>
               <summary className="px-20">
-                <Link href={"/services"}>Services</Link>
+                <Link href={"/services"} className="w-full">Services</Link>
               </summary>
               <ul className="p-2 w-[15rem] z-20">
                 {servicesMenu.map((service) => (
                   <li key={service.title} onClick={closeDropdownMenu}>
-                    <Link href={service.url}>{service.title}</Link>
+                    <Link href={service.url} className="w-full">{service.title}</Link>
                   </li>
                 ))}
               </ul>
             </details>
           </li>
           <li>
-            <Link href={"/gallery"}>Gallery</Link>
+            <Link href={"/gallery"} className="w-full">Gallery</Link>
           </li>
           <li>
-            <Link href={"/contact-us"}>Contact Us</Link>
+            <Link href={"/contact-us"} className="w-full">Contact Us</Link>
           </li>
         </ul>
       </div>

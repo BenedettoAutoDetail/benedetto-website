@@ -141,12 +141,12 @@ function AutoDetailing() {
   return (
     <div>
       {/* hero section  */}
-      <div className="relative min-h-[60vh] bg-center bg-no-repeat bg-cover">
+      <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-[url('/images/10bea6_e313de2941484aed864686c7ede825ee_mv2.png')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
         <div className="relative z-10 p-10 w-full text-center">
           <h1
             data-aos="fade-down"
-            className="text-white mt-32 text-5xl font-bold"
+            className="text-white mt-32 text-2xl md:text-5xl font-bold"
           >
             Auto Detailing Near Ladera Ranch & Orange County
           </h1>
@@ -165,7 +165,7 @@ function AutoDetailing() {
       </div>
 
       {/* Auto Detailing  */}
-      <div className="min-h-[70vh] grid grid-cols-[1fr_1fr] bg-white">
+      <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
         {/* left side  */}
         <div className="w-full mt-4 p-10">
           <img
@@ -181,7 +181,7 @@ function AutoDetailing() {
             Auto Detailing
           </span>
 
-          <h1 data-aos="fade-down" className="mt-10 text-3xl font-extrabold">
+          <h1 data-aos="fade-down" className="mt-10 text-xl md:text-3xl font-extrabold">
             Taking Care of Your Car with Auto Detailing Needs
           </h1>
 
@@ -210,10 +210,10 @@ function AutoDetailing() {
       {/* services procedure  */}
       <div className="bg-red-500 p-10">
         <div className="text-white flex flex-col justify-center items-center m-5 mb-10">
-          <h1 data-aos="fade-down" className="mt-10 text-5xl font-extrabold">
+          <h1 data-aos="fade-down" className="mt-10 text-3xl md:text-5xl font-extrabold">
             Auto Detailing
           </h1>
-          <h1 data-aos="fade-down" className="mt-4 text-2xl font-extrabold">
+          <h1 data-aos="fade-down" className="mt-4 text-lg md:text-2xl text-center md:text-start font-extrabold">
             extra charge for large vehicle
           </h1>
         </div>

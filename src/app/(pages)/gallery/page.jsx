@@ -45,16 +45,15 @@ function Gallery({ showHeroSection = true }) {
         </span>
 
         <p
-          data-aos="fade-up"
           className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
         >
           Explore Our Gallery
         </p>
       </div>
 
-      <div className="bg-white grid grid-cols-3 gap-2 p-20">
+      <div className="bg-white grid grid-cols-1 md:grid-cols-3 gap-2 p-5 md:p-20">
         {galleryImages.map((image, index) => (
-          <div key={index} className="w-full relative group">
+          <div key={index} className="w-full relative group" data-aos="fade-up">
             <img src={image} alt="" className="w-full h-full" />
             <div className="absolute inset-0 bg-red-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
           </div>

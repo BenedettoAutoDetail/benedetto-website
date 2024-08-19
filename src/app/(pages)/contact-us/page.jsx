@@ -1,19 +1,12 @@
-"use client";
+'use client'
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineAttachEmail } from "react-icons/md";
 
 function ContactUs() {
-  const [allServices, setAllServices] = useState([]);
-  const [selectedServices, setSelectedServices] = useState([]);
-
-  const router = useRouter();
 
   const {
     register,
@@ -79,7 +72,7 @@ function ContactUs() {
 
       {/* contact details  */}
       <div className="min-h-[40vh] grid grid-cols-1 md:grid-cols-3 gap-5 m-5 md:mx-20">
-        <div className="bg-[#020202] flex flex-col gap-5 items-center justify-center text-white p-5">
+        <div className="bg-[#020202] flex flex-col gap-5 items-center justify-center rounded-3xl text-white p-5">
           <div className="bg-[#ED1C24] w-20 h-20 rounded-full flex items-center justify-center">
             <IoLocationOutline className="text-5xl text-white" />
           </div>
@@ -92,7 +85,7 @@ function ContactUs() {
             4 Toribeth St, Ladera Ranch, Orange County, CA 92694, United States
           </p>
         </div>
-        <div className="bg-[#ED1C24] flex flex-col gap-5 items-center justify-center text-white p-5">
+        <div className="bg-[#ED1C24] flex flex-col gap-5 items-center justify-center rounded-3xl text-white p-5">
           <div className="bg-[#020202] w-20 h-20 rounded-full flex items-center justify-center">
             <LuPhoneCall className="text-5xl text-white" />
           </div>
@@ -105,7 +98,7 @@ function ContactUs() {
             (949) 201-9253
           </p>
         </div>
-        <div className="bg-[#020202] flex flex-col gap-5 items-center justify-center text-white p-5">
+        <div className="bg-[#020202] flex flex-col gap-5 items-center justify-center rounded-3xl text-white p-5">
           <div className="bg-[#ED1C24] w-20 h-20 rounded-full flex items-center justify-center">
             <MdOutlineAttachEmail className="text-5xl text-white" />
           </div>
@@ -121,9 +114,9 @@ function ContactUs() {
       </div>
 
       {/* contact form  */}
-      <div className="min-h-[80vh] grid md:grid-cols-[1fr_1fr] bg-[#f4f4f4] m-5 md:m-20">
+      <div className="min-h-[80vh] rounded-3xl grid md:grid-cols-[1fr_1fr] bg-[#f4f4f4] m-5 md:m-20">
         {/* left side  */}
-        <div className=" text-black p-5 md:p-10 ">
+        <div className=" text-black p-5 md:p-10" data-aos="fade-right">
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name Field */}
             <div className="mb-4">
@@ -220,11 +213,11 @@ function ContactUs() {
 
         {/* right side  */}
 
-        <div className="w-full hidden md:block">
+        <div className="w-full hidden md:block" data-aos="fade-left">
           <img
             src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
             alt=""
-            className="w-full h-full"
+            className="w-full h-full rounded-3xl"
           />
         </div>
       </div>

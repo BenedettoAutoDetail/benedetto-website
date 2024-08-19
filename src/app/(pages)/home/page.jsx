@@ -3,7 +3,7 @@ import React from "react";
 import AboutUs from "../about-us/page";
 import Services from "../(services)/services/page";
 import Gallery from "../gallery/page";
-// import { TestimonialCarousel } from "./TestimonialCarousel";
+import { TestimonialCarousel } from "./TestimonialCarousel";
 
 function Home() {
   return (
@@ -14,18 +14,17 @@ function Home() {
       }}
     >
       {/* hero section  */}
-
       <div className="relative min-h-screen bg-center bg-no-repeat bg-cover bg-black">
         <div className="absolute inset-0 bg-[url('/images/auto-detailing-scaled-1.png')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 w-[85%]">
-          <span className="inline-block text-white mt-20 text-2xl uppercase border-b-4 border-red-600">
+        <div className="relative z-10 p-10 text-center md:text-start md:w-[85%]">
+          <span className="inline-block text-white mt-20 md:text-2xl uppercase border-b-4 border-red-600">
             Welcome To BENEDETTO AUTO DETAIL - Best Car detailing Service in
             Town Town
           </span>
 
           <h1
             data-aos="fade-down"
-            className="text-white mt-10 text-5xl font-extrabold"
+            className="text-white mt-10 text-2xl md:text-5xl font-extrabold"
           >
             Ladera Ranch Based Car Detailing Experts Serving All Across Orange
             County, California
@@ -33,7 +32,7 @@ function Home() {
 
           <p
             data-aos="fade-up"
-            className="text-white mt-1 text-lg font-semibold text-opacity-85 font_barlow"
+            className="text-white mt-10 md:mt-1 text-justify md:text-start md:text-lg font-semibold text-opacity-85 font_barlow"
           >
             Benedetto Auto Detail has been serving the market with more than a
             decade through premium coating and auto detailing services in town
@@ -58,21 +57,34 @@ function Home() {
       <AboutUs showHeroSection={false} />
       <Services showHeroSection={false} />
       <Gallery showHeroSection={false} />
-      {/* <TestimonialCarousel /> */}
 
-      <div className="h-[70vh] bg-black/70 flex flex-col justify-center items-center gap-y-5 px-[20%]">
+      <div className="bg-white pb-10">
+
+      <div className="bg-white flex flex-col justify-center items-center text-black p-10">
+          <span className="inline-block mt-20 text-2xl uppercase border-b-4 border-red-600">
+          Testimonials
+          </span>
+
+          <h1 data-aos="fade-down" className="mt-10 text-3xl font-extrabold">
+          What Clients Say About Our Car detailing Service?
+          </h1>
+        </div>
+
+        <div className="w-[85vw] m-auto">
+          <TestimonialCarousel />
+        </div>
+      </div>
+
+      <div className="min-h-[80vh] bg-black/70 text-white flex flex-col justify-center items-center gap-y-5 px-[20%]">
         <h1
-          data-aos="fade-up"
+          data-aos="fade-right"
           className="mt-10 text-center text-3xl font-extrabold"
         >
           Thank You For Considering Benedetto Auto Detail For Your Car Care
           Needs
         </h1>
 
-        <h1
-          data-aos="fade-down"
-          className="mt-4 text-center text-lg font-extrabold"
-        >
+        <h1 data-aos="fade-left" className="mt-4 text-center text-lg ">
           We welcome any questions or feedback you may have about our services.
           Please feel free to reach out to us via phone, email or in person at
           our location.
@@ -80,8 +92,8 @@ function Home() {
 
         <Link
           href={"/contact-us"}
-          data-aos="fade-right"
-          className="btn border-0 bg-red-600 text-white hover:bg-red-600 hover:scale-110"
+          data-aos="fade-up"
+          className="btn mb-5 border-0 bg-red-600 text-white hover:bg-red-600 hover:scale-110"
         >
           Contact Us
         </Link>

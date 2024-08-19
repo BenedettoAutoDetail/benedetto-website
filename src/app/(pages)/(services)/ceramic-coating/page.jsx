@@ -84,12 +84,12 @@ function CeramicCoating() {
   return (
     <div>
       {/* hero section  */}
-      <div className="relative min-h-[60vh] bg-center bg-no-repeat bg-cover">
+      <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-[url('/images/10bea6_143823941f044c608861fb59b181b31d_mv2.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
         <div className="relative z-10 p-10 w-full text-center">
           <h1
             data-aos="fade-down"
-            className="text-white mt-32 text-5xl font-bold"
+            className="text-white mt-32 text-2xl md:text-5xl font-bold"
           >
             Ladera Ranch Based Ceramic Coating Experts Serving All Across Orange
             County, CA
@@ -109,7 +109,7 @@ function CeramicCoating() {
       </div>
 
       {/* Auto Detailing  */}
-      <div className="min-h-[70vh] grid grid-cols-[1fr_1fr] bg-white">
+      <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
         {/* left side  */}
         <div className="w-full mt-4 p-10">
           <img
@@ -125,7 +125,7 @@ function CeramicCoating() {
             Ceramic Coating
           </span>
 
-          <h1 data-aos="fade-down" className="mt-10 text-3xl font-extrabold">
+          <h1 data-aos="fade-down" className="mt-10 text-xl md:text-3xl font-extrabold">
             Get Best Ceramic Coating in Town Near Orange County, California
           </h1>
 
@@ -154,10 +154,10 @@ function CeramicCoating() {
       <div className="bg-red-500   p-10">
         
         <div className="text-white flex flex-col justify-center items-center m-5 mb-10">
-        <h1 data-aos="fade-down" className="mt-10 text-5xl font-extrabold">
+        <h1 data-aos="fade-down" className="mt-10 text-3xl md:text-5xl font-extrabold">
           Best Prices for Ceramic Coating
         </h1>
-        <h1 data-aos="fade-down" className="mt-4 text-2xl font-extrabold">
+        <h1 data-aos="fade-down" className="mt-4 text-lg md:text-2xl text-center md:text-start font-extrabold">
           extra charge for large vehicle
         </h1>
         </div>

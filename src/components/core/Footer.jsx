@@ -10,7 +10,7 @@ function Footer() {
   return (
     <>
       <footer className="footer bg-base-200 text-base-content p-10 md:grid md:grid-cols-4 font_barlow">
-        <aside>
+        <aside data-aos = 'fade-up'>
           <div className="flex-shrink-0">
             <Link href="/">
               <img
@@ -32,84 +32,84 @@ function Footer() {
           {/* social media link  */}
           <div className="flex justify-center items-center gap-x-2 ">
             <Link href={"/"}>
-              <CiFacebook className="text-3xl hover:text-black hover:scale-110 hover:font-semibold transition-all" />
+              <CiFacebook className="text-[2rem] text-red-500 hover:scale-110 hover:font-semibold transition-all" />
             </Link>
             <Link href={"/"}>
-              <IoLogoInstagram className="text-3xl hover:text-black hover:scale-110 hover:font-semibold transition-all" />
+              <IoLogoInstagram className="text-3xl text-red-500 hover:scale-110 hover:font-semibold transition-all" />
             </Link>
             <Link href={"/"}>
-              <AiOutlineYoutube className="text-4xl hover:text-black hover:scale-110 hover:font-semibold transition-all" />
+              <AiOutlineYoutube className="text-4xl text-red-500 hover:scale-110 hover:font-semibold transition-all" />
             </Link>
           </div>
         </aside>
-        <nav className="md:ms-10">
-          <h6 className="footer-title">Quick Links</h6>
+        <nav className="md:ms-10" data-aos = 'fade-up'>
+          <h6 className="footer-title text-red-500">Quick Links</h6>
           <Link
             href={"/"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Home
           </Link>
           <Link
             href={"/about-us"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             About Us
           </Link>
           <Link
             href={"/services"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Services
           </Link>
           <Link
             href={"/gallery"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Gallery
           </Link>
           <Link
             href={"/contact-us"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Contact Us
           </Link>
           <Link
             href={"/booking"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Booking
           </Link>
         </nav>
-        <nav>
-          <h6 className="footer-title">Services</h6>
+        <nav data-aos = 'fade-up'>
+          <h6 className="footer-title text-red-500">Services</h6>
           <Link
             href={"/auto-detailing"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Auto Detailing
           </Link>
           <Link
             href={"/ceramic-coating"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Ceramic Coating
           </Link>
           <Link
             href={"/interior-coating"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Interior Coating
           </Link>
           <Link
             href={"/paint-protection-film"}
-            className="text-decoration-none hover:text-black hover:font-semibold"
+            className="text-decoration-none hover:text-red-500 hover:font-semibold"
           >
             Paint Protection Film
           </Link>
         </nav>
-        <nav>
-          <h6 className="footer-title">Contact Us</h6>
+        <nav data-aos = 'fade-up'>
+          <h6 className="footer-title text-red-500">Contact Us</h6>
           <div className="cursor-pointer">
             <div className="flex gap-x-2 items-center">
               <MdOutlinePhoneInTalk className="text-lg" />
@@ -132,7 +132,7 @@ function Footer() {
             </div>
           </div>
           <nav className="mt-3">
-            <h6 className="footer-title">Service Area</h6>
+            <h6 className="footer-title text-red-500">Service Area</h6>
             <div className="cursor-pointer">
               <div className="flex gap-x-2 items-center">
                 <IoLocationOutline className="text-lg" />
@@ -143,12 +143,12 @@ function Footer() {
         </nav>
       </footer>
 
-      <footer className="footer bg-base-200 text-base-content border-t-2 border-slate-700 flex flex-col p-5">
-        <p className="text-start">Copyright © 2023, Benedetto Auto Detail. All Rights Reserved.</p>
+      <footer data-aos = 'fade-right' className="footer bg-base-200 text-base-content border-t-2 border-slate-700 flex flex-col p-5">
+        <p className="text-start text-red-500">Copyright © 2023, Benedetto Auto Detail. All Rights Reserved.</p>
         <div className="flex gap-2 justify-end self-end">
-          <Link href={"/"} className="hover:text-black">Privacy Policy</Link>
+          <Link href={"/"} className="text-red-500">Privacy Policy</Link>
           |
-          <Link href={"/"} className="hover:text-black">Account Deletion</Link>
+          <Link href={"/"} className="text-red-500">Account Deletion</Link>
         </div>
       </footer>
     </>

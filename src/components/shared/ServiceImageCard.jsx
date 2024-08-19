@@ -2,7 +2,7 @@ import React from "react";
 
 function ServiceImageCard({ image = "", title = "", subtitle = "" }) {
   return (
-    <div className="relative min-h-[50vh] bg-center bg-no-repeat bg-cover">
+    <div className="relative min-h-[50vh] bg-center bg-no-repeat bg-cover shadow-xl">
       <div
         className="rounded-3xl px-5 absolute inset-0 bg-center bg-no-repeat bg-cover transition-all duration-300"
         style={{ backgroundImage: `url(${image})` }}

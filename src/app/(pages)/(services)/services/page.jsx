@@ -69,7 +69,7 @@ function Services({showHeroSection=true}) {
 
         <p
           data-aos="fade-up"
-          className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
+          className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
         >
           Explore Our Services
         </p>

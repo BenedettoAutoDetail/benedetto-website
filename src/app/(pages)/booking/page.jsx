@@ -88,9 +88,9 @@ function Booking() {
 
   useEffect(() => {
     toast.success(
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center bg-black text-white p-4 w-full">
         <p className="text-justify">
-          <span className="font-bold">Note:</span> Please use the same email for
+          <span className="font-bold text-red-500">Note: </span>Please use the same email for
           booking that you want to use to view your booking history on the
           mobile app.
         </p>
@@ -101,11 +101,18 @@ function Booking() {
       {
         duration: Infinity, // Make the toast stay indefinitely until dismissed
         icon: null, // Remove the default success icon
+        position: "bottom-right", // Set the toast location to bottom right
+        style: {
+          padding: 0, // Remove padding from the toast container
+          margin: 0,  // Remove margin from the toast container
+          background: "black", // Ensure the background is black
+        },
       }
     );
-
+  
     fetchServices();
   }, []);
+  
 
   return (
     <div className="bg-white">
@@ -148,9 +155,9 @@ function Booking() {
       </div>
 
       {/* book now  */}
-      <div className="min-h-[70vh] grid grid-cols-[1fr_1fr] bg-[#f4f4f4] m-20 pb-24">
+      <div className="min-h-[70vh] rounded-3xl grid grid-cols-[1fr_1fr] bg-[#f4f4f4] m-20 pb-24">
         {/* left side  */}
-        <div className=" text-black p-10 ">
+        <div className=" text-black p-10 " data-aos="fade-right">
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name Field */}
             <div className="mb-4">
@@ -206,9 +213,10 @@ function Booking() {
                 id="date"
                 {...register("date", { required: true })}
                 onChange={(date) => setValue("date", date)}
-                className={`mt-1 bg-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm ${
+                className={`mt-1 bg-white block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm ${
                   errors.date ? "border-red-500" : ""
                 }`}
+                inputProps={{ className: "bg-white text-black w-full px-3 py-2 focus:outline-none focus:ring-red-500 focus:border-red-500" }}
                 timeFormat={false} // Optional: Disable time selection if you want only date
               />
               {errors.date && (
@@ -228,9 +236,10 @@ function Booking() {
                 id="time"
                 {...register("time", { required: true })}
                 onChange={(time) => setValue("time", time)}
-                className={`mt-1 bg-white block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm ${
+                className={`mt-1 bg-white block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm ${
                   errors.time ? "border-red-500" : ""
                 }`}
+                inputProps={{ className: "bg-white text-black w-full px-3 py-2 focus:outline-none focus:ring-red-500 focus:border-red-500" }}
                 dateFormat={false} // Optional: Disable date selection if you want only time
               />
               {errors.time && (
@@ -284,12 +293,11 @@ function Booking() {
         </div>
 
         {/* right side  */}
-
-        <div className="w-full">
+        <div className="w-full" data-aos="fade-left">
           <img
             src="/images/ceramic-coating-for-cars.jpg"
             alt=""
-            className="w-full h-full"
+            className="w-full h-full rounded-3xl"
           />
         </div>
       </div>

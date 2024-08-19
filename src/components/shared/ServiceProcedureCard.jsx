@@ -3,11 +3,11 @@ import React from "react";
 function ServiceProcedureCard({ service = {} }) {
   return (
     <div
-      className="bg-white text-black p-7 rounded-3xl"
+      className="bg-white text-black p-7 rounded-3xl shadow-xl"
       data-aos="fade-up"
       key={service.title}
     >
-      <h1 className="mt-2 text-3xl font-extrabold">{service.title}</h1>
+      <h1 className="mt-2 text-xl md:text-3xl font-extrabold">{service.title}</h1>
 
       <h1 className="text-red-500 mt-3 mb-4 text-3xl font-extrabold">
         ${service.price}
