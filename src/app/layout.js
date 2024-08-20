@@ -49,7 +49,7 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body
-        className={`${inter.className} h-screen  grid grid-rows-[auto_1fr_auto]`}
+        className={`${inter.className} h-screen grid grid-rows-[auto_1fr_auto]`}
       >
         <Navbar />
         <Toaster position="top-center" reverseOrder={false} />

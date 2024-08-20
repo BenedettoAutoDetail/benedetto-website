@@ -8,7 +8,7 @@ import { TestimonialCarousel } from "./TestimonialCarousel";
 function Home() {
   return (
     <div
-      className="bg-center bg-no-repeat bg-cover"
+      className="bg-center bg-no-repeat bg-cover overflow-x-hidden"
       style={{
         backgroundImage: `url(/images/Ceramic_Coating_Application_SEO.jpg)`,
       }}
