@@ -97,7 +97,7 @@ function ContactUs() {
       </div>
 
       {/* contact form  */}
-      <div className="min-h-[80vh] rounded-3xl grid md:grid-cols-[1fr_1fr] bg-[#f4f4f4] m-5 shadow-xl md:m-20">
+      <div className="min-h-[80vh] rounded-3xl grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-[#f4f4f4] m-5 shadow-xl md:m-20">
         {/* left side  */}
         <div className=" text-black p-5 md:p-10" data-aos="fade-right">
           <form onSubmit={handleSubmit(onSubmit)}>

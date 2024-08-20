@@ -31,7 +31,7 @@ function Navbar() {
   };
 
   return (
-    <div className="navbar bg-base-100 font_barlow p-10 ">
+    <div className="navbar bg-base-100 font_barlow p-10 flex justify-between">
       {/* navbar start  */}
       <div className="navbar-start">
         {/* burger icon on the small screens  */}
@@ -85,7 +85,7 @@ function Navbar() {
           </ul>
         </div>
 
-        <div className="flex-shrink-0 p-2">
+        <div className="flex-shrink-0 p-2 hidden lg:block">
           <Link href={"/"}>
             <img
               src="/images/Benedetto-Auto-Detail-Logo.png" // Update with your logo path
@@ -95,6 +95,18 @@ function Navbar() {
           </Link>
         </div>
       </div>
+
+      <div className="flex-shrink-0 p-2 block lg:hidden">
+          <Link href={"/"}>
+            <img
+              src="/images/Benedetto-Auto-Detail-Logo.png" // Update with your logo path
+              alt="Company Logo"
+              className="ms-4 md:ms-0 h-8 md:h-12 w-20 md:w-32" // Set height and width
+            />
+          </Link>
+        </div>
+
+      
 
       {/* navbar middle part  */}
       <div className="navbar-center hidden lg:flex font-semibold">
@@ -141,7 +153,7 @@ function Navbar() {
       </div>
 
       {/* navbar end  */}
-      <div className="navbar-end">
+      <div className="navbar-end hidden lg:flex lg:justify-end">
         <Link
           href={"/booking"}
           className="btn bg-red-600 text-white hover:bg-red-600 hover:scale-110"
