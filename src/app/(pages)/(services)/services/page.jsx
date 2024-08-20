@@ -34,7 +34,10 @@ const cardsdetail = [
   },
 ];
 
-function Services({ showHeroSection = true }) {
+function Services({ showHeroSection = true, limit}) {
+
+  const cardsToShow = limit ? cardsdetail.slice(0, limit) : cardsdetail;
+
   return (
     <div>
       {/* hero section  */}
@@ -49,21 +52,47 @@ function Services({ showHeroSection = true }) {
       )}
 
       {/* service cards  */}
-      <div className="bg-white text-black/90 flex flex-col items-center gap-2 pb-5">
-        <span className="inline-block mt-20 text-2xl uppercase text-red-600">
-          Our Services
-        </span>
+      {showHeroSection ? (
+        <div className="bg-white text-black/90 flex flex-col items-center gap-2 pb-5">
+          <span className="inline-block mt-20 text-2xl uppercase text-red-600">
+            Our Services
+          </span>
 
-        <p
-          data-aos="fade-up"
-          className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
-        >
-          Explore Our Services
-        </p>
-      </div>
+          <p
+            data-aos="fade-up"
+            className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
+          >
+            Explore Our Services
+          </p>
+        </div>
+      ) : (
+        <div className="bg-white grid grid-cols-1 md:grid-cols-[3fr_1fr]">
+          <div className="bg-white text-black/90 flex flex-col items-start pl-10 gap-2 pb-5">
+            <span className="inline-block mt-14 text-2xl uppercase text-red-600">
+              Our Services
+            </span>
+
+            <p
+              data-aos="fade-up"
+              className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
+            >
+              Explore Our Services
+            </p>
+          </div>
+
+          <div className="flex justify-end items-center pr-10">
+            <Link
+              href={"/services"}
+              className="btn bg-red-600 border-0 text-white hover:bg-red-600 hover:scale-110"
+            >
+              All Services
+            </Link>
+          </div>
+        </div>
+      )}
 
       <div className="bg-white grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
-        {cardsdetail.map(({ image, title, description, url }) => (
+        {cardsToShow.map(({ image, title, description, url }) => (
           <ServiceCard
             key={title}
             image={image}

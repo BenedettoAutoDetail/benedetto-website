@@ -30,7 +30,7 @@ function AboutUs({ showHeroSection = true }) {
       {/* about us  */}
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
         {/* left side  */}
-        <div className="p-10">
+        <div className="p-10" data-aos="fade-right">
           <div className="grid grid-cols-[1fr_1fr] gap-4">
             <img
               src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"

@@ -4,20 +4,25 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
 
 const testimonials = [
   {
     username: "Olivia G.",
-    comment: "I totally recommend these guys because of their work ethic and premium services. The team is so polite and knowledgeable.",
+    comment:
+      "I totally recommend these guys because of their work ethic and premium services. The team is so polite and knowledgeable.",
   },
   {
     username: "John Lark",
-    comment: "I have been using Benedetto Auto Detail for a year now. I am quite impressed by their work and professionalism of the team.",
+    comment:
+      "I have been using Benedetto Auto Detail for a year now. I am quite impressed by their work and professionalism of the team.",
   },
   {
     username: "Jennifer L.",
-    comment: "Benedetto Auto Detail is the best auto detailing service provider in Orange County California. I am totally in love with the result.",
+    comment:
+      "Benedetto Auto Detail is the best auto detailing service provider in Orange County California. I am totally in love with the result.",
   },
   {
     username: "Bob Brown",
@@ -56,6 +61,8 @@ export function TestimonialCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious className="bg-red-500 text-white border-0 hover:bg-red-600 hover:text-white" />
+        <CarouselNext className="bg-red-500 text-white border-0 hover:bg-red-600 hover:text-white" />
       </Carousel>
     </div>
   );

@@ -55,7 +55,7 @@ function Home() {
       </div>
 
       <AboutUs showHeroSection={false} />
-      <Services showHeroSection={false} />
+      <Services showHeroSection={false} limit={3} />
       <Gallery showHeroSection={false} />
 
       <div className="bg-white pb-10">

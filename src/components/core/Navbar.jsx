@@ -22,19 +22,11 @@ const servicesMenu = [
 ];
 
 function Navbar() {
-  const detailsRef = useRef(null);
-
-  const closeDropdownMenu = () => {
-    if (detailsRef.current) {
-      detailsRef.current.removeAttribute("open");
-    }
-  };
-
   return (
     <div className="navbar bg-base-100 font_barlow p-10 flex justify-between">
-      {/* navbar start  */}
+      {/* Navbar start */}
       <div className="navbar-start">
-        {/* burger icon on the small screens  */}
+        {/* Burger icon on the small screens */}
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -63,18 +55,32 @@ function Navbar() {
               <Link href={"/about-us"}>About Us</Link>
             </li>
             <li>
-              <details ref={detailsRef}>
-                <summary>
-                  <Link href={"/services"}>Services</Link>
-                </summary>
-                <ul className="p-2">
+              <div className="dropdown">
+                <Link href={"/services"} className="flex justify-between">
+                  Services
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 text-red-600 ml-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="3"
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </Link>
+                <ul className="p-2 mt-2 hidden group-hover:block bg-base-100 rounded-box shadow z-20">
                   {servicesMenu.map((service) => (
-                    <li key={service.title} onClick={closeDropdownMenu}>
+                    <li key={service.title}>
                       <Link href={service.url}>{service.title}</Link>
                     </li>
                   ))}
                 </ul>
-              </details>
+              </div>
             </li>
             <li>
               <Link href={"/gallery"}>Gallery</Link>
@@ -97,18 +103,16 @@ function Navbar() {
       </div>
 
       <div className="flex-shrink-0 p-2 block lg:hidden">
-          <Link href={"/"}>
-            <img
-              src="/images/Benedetto-Auto-Detail-Logo.png" // Update with your logo path
-              alt="Company Logo"
-              className="ms-4 md:ms-0 h-8 md:h-12 w-20 md:w-32" // Set height and width
-            />
-          </Link>
-        </div>
+        <Link href={"/"}>
+          <img
+            src="/images/Benedetto-Auto-Detail-Logo.png" // Update with your logo path
+            alt="Company Logo"
+            className="ms-4 md:ms-0 h-8 md:h-12 w-20 md:w-32" // Set height and width
+          />
+        </Link>
+      </div>
 
-      
-
-      {/* navbar middle part  */}
+      {/* Navbar middle part */}
       <div className="navbar-center hidden lg:flex font-semibold">
         <ul className="menu menu-horizontal px-1 text-red-500">
           <li className="m-1">
@@ -121,23 +125,19 @@ function Navbar() {
               About Us
             </Link>
           </li>
-          <li className="m-1">
-            <details ref={detailsRef}>
-              <summary className="px-20">
-                <Link href={"/services"} className="w-full">
-                  Services
-                </Link>
-              </summary>
-              <ul className="p-2 w-[15rem] z-20">
-                {servicesMenu.map((service) => (
-                  <li key={service.title} onClick={closeDropdownMenu}>
-                    <Link href={service.url} className="w-full">
-                      {service.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </details>
+          <li className="m-1 relative group">
+            <Link href={"/services"} className="px-20 w-full">
+              Services
+            </Link>
+            <ul className="absolute border-0 top-7 left-[-1.8rem] p-2 w-[15rem] bg-base-100 rounded-box shadow mt-2 hidden group-hover:block z-20">
+              {servicesMenu.map((service) => (
+                <li key={service.title}>
+                  <Link href={service.url} className="w-full">
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </li>
           <li className="m-1">
             <Link href={"/gallery"} className="w-full">
@@ -152,7 +152,7 @@ function Navbar() {
         </ul>
       </div>
 
-      {/* navbar end  */}
+      {/* Navbar end */}
       <div className="navbar-end hidden lg:flex lg:justify-end">
         <Link
           href={"/booking"}
