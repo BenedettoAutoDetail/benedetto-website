@@ -42,7 +42,7 @@ export function TestimonialCarousel() {
               className="flex-none w-full md:w-1/3 cursor-grab select-none "
             >
               <div className="p-4 h-full">
-                <Card className="bg-red-600 text-white rounded-3xl h-full flex flex-col shadow-xl">
+                <Card className="bg-red-600 text-white rounded-3xl h-full flex flex-col">
                   <CardContent className="flex flex-col items-center justify-center p-6 py-12 flex-1 ">
                     <p className="text-lg italic mb-4 text-center">
                       {testimonial.comment}
