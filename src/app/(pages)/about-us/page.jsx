@@ -109,7 +109,11 @@ function AboutUs({ showHeroSection = true }) {
 
           <div className="flex flex-col mt-5 gap-y-3">
             {cardsDetail.map(({ title, description }) => (
-              <AboutUsCard title={title} description={description} />
+              <AboutUsCard
+                key={title}
+                title={title}
+                description={description}
+              />
             ))}
           </div>
         </div>
