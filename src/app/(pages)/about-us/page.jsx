@@ -1,7 +1,5 @@
-// import AboutUsCard from "@/components/shared/AboutUsCard";
 import { AboutUsCard, HeroSection } from "../../../components/shared";
 import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
 
 const cardsDetail = [
   {

@@ -23,30 +23,8 @@ function ContactUs() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-x-hidden">
       {/* hero section  */}
-      {/* <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
-        <div className="absolute inset-0 bg-[url('/images/ceramic-coating-for-cars.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 w-full text-center">
-          <h1
-            data-aos="fade-down"
-            className="text-white mt-32 text-5xl font-bold"
-          >
-            Contact Us
-          </h1>
-
-          <div
-            data-aos="fade-up"
-            className="flex justify-center text-white mt-1 text-md font_barlow font-semibold text-opacity-85 font_barlow"
-          >
-            <div className="flex gap-2 items-center">
-              Home
-              <FaLongArrowAltRight className="text-lg text-red-600" />
-              Contact Us
-            </div>
-          </div>
-        </div>
-      </div> */}
       <HeroSection
         bgImage={"/images/ceramic-coating-for-cars.jpg"}
         title={"Contact Us"}
@@ -76,7 +54,7 @@ function ContactUs() {
       </div>
 
       {/* contact details  */}
-      <div className="min-h-[40vh] grid grid-cols-1 md:grid-cols-3 gap-5 m-5 md:mx-20">
+      <div className="min-h-[40vh] grid grid-cols-1 md:grid-cols-3 gap-5 m-5 md:mx-10">
         <div className="bg-[#020202] flex flex-col gap-5 items-center justify-center rounded-3xl text-white p-5">
           <div className="bg-[#ED1C24] w-20 h-20 rounded-full flex items-center justify-center">
             <IoLocationOutline className="text-5xl text-white" />
@@ -119,7 +97,7 @@ function ContactUs() {
       </div>
 
       {/* contact form  */}
-      <div className="min-h-[80vh] rounded-3xl grid md:grid-cols-[1fr_1fr] bg-[#f4f4f4] m-5 md:m-20">
+      <div className="min-h-[80vh] rounded-3xl grid md:grid-cols-[1fr_1fr] bg-[#f4f4f4] m-5 shadow-xl md:m-20">
         {/* left side  */}
         <div className=" text-black p-5 md:p-10" data-aos="fade-right">
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -217,7 +195,6 @@ function ContactUs() {
         </div>
 
         {/* right side  */}
-
         <div className="w-full hidden md:block" data-aos="fade-left">
           <img
             src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
@@ -231,7 +208,6 @@ function ContactUs() {
       <div className="w-full h-[70vh]">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3325.0967561597363!2d-117.63598852494661!3d33.55086234403936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcedd039414ce1%3A0xf0541a4e379078c6!2s4%20Toribeth%20St%20%234%2C%20Mission%20Viejo%2C%20CA%2092694%2C%20USA!5e0!3m2!1sen!2s!4v1723824435536!5m2!1sen!2s"
-          allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           className="w-full h-full border-0"

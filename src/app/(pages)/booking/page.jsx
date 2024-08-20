@@ -115,7 +115,7 @@ function Booking() {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pb-2 overflow-x-hidden">
       {/* hero section  */}
       <HeroSection
         bgImage={"/images/truck-driver-pointing-the-issue-to-his-mechanic.jpg"}
@@ -138,7 +138,7 @@ function Booking() {
       </div>
 
       {/* book now  */}
-      <div className="min-h-[70vh] rounded-3xl grid grid-cols-[1fr_1fr] bg-[#f4f4f4] m-20 pb-24">
+      <div className="min-h-[70vh] shadow-xl rounded-3xl grid grid-cols-[1fr_1fr] bg-[#f4f4f4] m-20">
         {/* left side  */}
         <div className=" text-black p-10 " data-aos="fade-right">
           <form onSubmit={handleSubmit(onSubmit)}>

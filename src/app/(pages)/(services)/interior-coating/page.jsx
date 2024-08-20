@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/shared";
 import ServiceProcedureCard from "@/components/shared/ServiceProcedureCard";
 import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
 
 const servicesList = [
   {

@@ -2,10 +2,10 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { CreditCard, PaymentForm } from "react-square-web-payments-sdk";
 import { makePayment } from "@/server-actions/make-payment";
-import React from "react";
+import React, { Suspense } from "react";
 import toast from "react-hot-toast";
 
-function PaymentPage() {
+function PaymentContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const data = searchParams.get("data");
@@ -70,4 +70,10 @@ function PaymentPage() {
   );
 }
 
-export default PaymentPage;
+export default function PaymentPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <PaymentContent />
+    </Suspense>
+  );
+}
