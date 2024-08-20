@@ -1,48 +1,33 @@
 // import AboutUsCard from "@/components/shared/AboutUsCard";
-import { AboutUsCard } from "../../../components/shared";
+import { AboutUsCard, HeroSection } from "../../../components/shared";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-
 const cardsDetail = [
   {
-    title: 'Full Insurance and Secure Care',
-    description: 'We handle your valued cars with great care and expertise. Choosing us comes with total peace.'
+    title: "Full Insurance and Secure Care",
+    description:
+      "We handle your valued cars with great care and expertise. Choosing us comes with total peace.",
   },
 
   {
-    title: 'Satisfaction Guaranteed',
-    description: 'We strive to serve you better every day. All we deliver is your total satisfaction and trust in our services.'
+    title: "Satisfaction Guaranteed",
+    description:
+      "We strive to serve you better every day. All we deliver is your total satisfaction and trust in our services.",
   },
-]
+];
 
-
-function AboutUs({showHeroSection=true}) {
+function AboutUs({ showHeroSection = true }) {
   return (
     <div>
       {/* hero section  */}
-      {showHeroSection && <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
-        <div className="absolute inset-0 bg-[url('/images/Ceramic_Coating_Application_SEO.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 w-full text-center">
-          <h1
-            data-aos="fade-down"
-            className="text-white mt-32 text-5xl font-bold"
-          >
-            About Us
-          </h1>
-
-          <div
-            data-aos="fade-up"
-            className="flex justify-center text-white mt-1 text-md font_barlow font-semibold text-opacity-85 font_barlow"
-          >
-            <div className="flex gap-2 items-center">
-              Home
-              <FaLongArrowAltRight className="text-lg text-red-600" />
-              About Us
-            </div>
-          </div>
-        </div>
-      </div>}
+      {showHeroSection && (
+        <HeroSection
+          bgImage={"/images/Ceramic_Coating_Application_SEO.jpg"}
+          title={"About Us"}
+          subtitle={"About Us"}
+        />
+      )}
 
       {/* about us  */}
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
@@ -52,18 +37,19 @@ function AboutUs({showHeroSection=true}) {
             <img
               src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
               alt=""
+              className="rounded-lg shadow-xl"
             />
             <img
               src="/images/Locate-a-Car-Detailing-Near-You.jpg"
               alt=""
-              className="h-full"
+              className="h-full rounded-lg shadow-xl"
             />
           </div>
           <div className="w-full mt-4">
             <img
               src="/images/ceramic-coating-for-cars.jpg"
               alt=""
-              className="w-full"
+              className="w-full rounded-lg shadow-xl"
             />
           </div>
         </div>
@@ -122,15 +108,10 @@ function AboutUs({showHeroSection=true}) {
           </p>
 
           <div className="flex flex-col mt-5 gap-y-3">
-          {
-            cardsDetail.map(({title, description}) => (
-              <AboutUsCard title={title} description={description}/>
-            ))
-          }
+            {cardsDetail.map(({ title, description }) => (
+              <AboutUsCard title={title} description={description} />
+            ))}
           </div>
-
-
-
         </div>
 
         {/* right side  */}
@@ -138,7 +119,7 @@ function AboutUs({showHeroSection=true}) {
           <img
             src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
             alt=""
-            className="w-full h-full"
+            className="w-full h-full rounded-lg shadow-xl"
           />
         </div>
       </div>

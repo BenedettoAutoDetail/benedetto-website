@@ -1,13 +1,13 @@
-'use client'
+"use client";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineAttachEmail } from "react-icons/md";
+import { HeroSection } from "@/components/shared";
 
 function ContactUs() {
-
   const {
     register,
     handleSubmit,
@@ -25,7 +25,7 @@ function ContactUs() {
   return (
     <div className="bg-white">
       {/* hero section  */}
-      <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
+      {/* <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
         <div className="absolute inset-0 bg-[url('/images/ceramic-coating-for-cars.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
         <div className="relative z-10 p-10 w-full text-center">
           <h1
@@ -46,7 +46,12 @@ function ContactUs() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <HeroSection
+        bgImage={"/images/ceramic-coating-for-cars.jpg"}
+        title={"Contact Us"}
+        subtitle={"Contact Us"}
+      />
 
       {/* contact us section  */}
       <div className="w-full bg-white text-black flex flex-col items-center gap-2 pb-5">

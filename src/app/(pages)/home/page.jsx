@@ -70,7 +70,7 @@ function Home() {
           </h1>
         </div>
 
-        <div className="w-[85vw] m-auto">
+        <div data-aos="fade-up" className="w-[85vw] m-auto">
           <TestimonialCarousel />
         </div>
       </div>

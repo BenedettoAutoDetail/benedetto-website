@@ -1,7 +1,6 @@
+import { HeroSection } from "@/components/shared";
 import ServiceImageCard from "@/components/shared/ServiceImageCard";
-import ServiceProcedureCard from "@/components/shared/ServiceProcedureCard";
 import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
 
 const servicesList = [
   {
@@ -30,29 +29,13 @@ function PaintProtectionFilm() {
   return (
     <div>
       {/* hero section  */}
-      <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
-        <div className="absolute inset-0 bg-[url('/images/10bea6_c97551ce357045e08263e1df3a6beed1_mv2.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 w-full text-center">
-          <h1
-            data-aos="fade-down"
-            className="text-white mt-32 text-2xl md:text-5xl font-bold"
-          >
-            Ladera Ranch Paint Protection Film Experts Serving All Across Orange
-            County, Ca
-          </h1>
-
-          <div
-            data-aos="fade-up"
-            className="flex justify-center text-white mt-1 text-md font_barlow font-semibold text-opacity-85 font_barlow"
-          >
-            <div className="flex gap-2 items-center">
-              Home
-              <FaLongArrowAltRight className="text-lg text-red-600" />
-              Paint Protection Film
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        bgImage={"/images/10bea6_c97551ce357045e08263e1df3a6beed1_mv2.jpg"}
+        title={
+          "Ladera Ranch Paint Protection Film Experts Serving All Across Orange County, Ca"
+        }
+        subtitle={"Paint Protection Film"}
+      />
 
       {/* Auto Detailing  */}
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
@@ -101,19 +84,29 @@ function PaintProtectionFilm() {
       {/* services procedure  */}
       <div className="bg-red-500 p-5">
         <div className="text-white flex flex-col justify-center items-center m-5 mb-10">
-          <h1 data-aos="fade-down" className="mt-10 text-3xl md:text-5xl font-extrabold">
+          <h1
+            data-aos="fade-down"
+            className="mt-10 text-3xl md:text-5xl font-extrabold"
+          >
             Paint Protection Film Coating Cost
           </h1>
-          <h1 data-aos="fade-down" className="mt-4 text-lg md:text-2xl text-center md:text-start font-extrabold">
+          <h1
+            data-aos="fade-down"
+            className="mt-4 text-lg md:text-2xl text-center md:text-start font-extrabold"
+          >
             extra charge for large vehicle
           </h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-12 md:px-14">
           {servicesList.map((service) => (
-            <ServiceImageCard key={service.title} image={service.image} title={service.title} subtitle={service.subtitle} />
+            <ServiceImageCard
+              key={service.title}
+              image={service.image}
+              title={service.title}
+              subtitle={service.subtitle}
+            />
           ))}
-
         </div>
       </div>
     </div>

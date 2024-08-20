@@ -99,38 +99,53 @@ function Navbar() {
       {/* navbar middle part  */}
       <div className="navbar-center hidden lg:flex font-semibold">
         <ul className="menu menu-horizontal px-1 text-red-500">
-          <li>
-            <Link href={"/"} className="me-1 w-full">Home</Link>
+          <li className="m-1">
+            <Link href={"/"} className="me-1 w-full">
+              Home
+            </Link>
           </li>
-          <li>
-            <Link href={"/about-us"} className="w-full">About Us</Link>
+          <li className="m-1">
+            <Link href={"/about-us"} className="w-full">
+              About Us
+            </Link>
           </li>
-          <li>
+          <li className="m-1">
             <details ref={detailsRef}>
               <summary className="px-20">
-                <Link href={"/services"} className="w-full">Services</Link>
+                <Link href={"/services"} className="w-full">
+                  Services
+                </Link>
               </summary>
               <ul className="p-2 w-[15rem] z-20">
                 {servicesMenu.map((service) => (
                   <li key={service.title} onClick={closeDropdownMenu}>
-                    <Link href={service.url} className="w-full">{service.title}</Link>
+                    <Link href={service.url} className="w-full">
+                      {service.title}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </details>
           </li>
-          <li>
-            <Link href={"/gallery"} className="w-full">Gallery</Link>
+          <li className="m-1">
+            <Link href={"/gallery"} className="w-full">
+              Gallery
+            </Link>
           </li>
-          <li>
-            <Link href={"/contact-us"} className="w-full">Contact Us</Link>
+          <li className="m-1">
+            <Link href={"/contact-us"} className="w-full">
+              Contact Us
+            </Link>
           </li>
         </ul>
       </div>
 
       {/* navbar end  */}
       <div className="navbar-end">
-        <Link href={"/booking"} className="btn bg-red-600 text-white hover:bg-red-600 hover:scale-110">
+        <Link
+          href={"/booking"}
+          className="btn bg-red-600 text-white hover:bg-red-600 hover:scale-110"
+        >
           Book Now
         </Link>
       </div>

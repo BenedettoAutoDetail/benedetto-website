@@ -10,7 +10,7 @@ function Footer() {
   return (
     <>
       <footer className="footer bg-base-200 text-base-content p-10 md:grid md:grid-cols-4 font_barlow">
-        <aside data-aos = 'fade-up'>
+        <aside data-aos="fade-up">
           <div className="flex-shrink-0">
             <Link href="/">
               <img
@@ -42,7 +42,7 @@ function Footer() {
             </Link>
           </div>
         </aside>
-        <nav className="md:ms-10" data-aos = 'fade-up'>
+        <nav className="md:ms-10" data-aos="fade-up">
           <h6 className="footer-title text-red-500">Quick Links</h6>
           <Link
             href={"/"}
@@ -81,7 +81,7 @@ function Footer() {
             Booking
           </Link>
         </nav>
-        <nav data-aos = 'fade-up'>
+        <nav data-aos="fade-up">
           <h6 className="footer-title text-red-500">Services</h6>
           <Link
             href={"/auto-detailing"}
@@ -108,7 +108,7 @@ function Footer() {
             Paint Protection Film
           </Link>
         </nav>
-        <nav data-aos = 'fade-up'>
+        <nav data-aos="fade-up">
           <h6 className="footer-title text-red-500">Contact Us</h6>
           <div className="cursor-pointer">
             <div className="flex gap-x-2 items-center">
@@ -143,12 +143,16 @@ function Footer() {
         </nav>
       </footer>
 
-      <footer data-aos = 'fade-right' className="footer bg-base-200 text-base-content border-t-2 border-slate-700 flex flex-col p-5">
-        <p className="text-start text-red-500">Copyright © 2023, Benedetto Auto Detail. All Rights Reserved.</p>
+      <footer
+        data-aos="fade-right"
+        className="footer bg-base-200 text-base-content border-t-2 border-slate-700 flex flex-col p-5"
+      >
+        <p className="text-start text-red-500">
+          Copyright © 2023, Benedetto Auto Detail. All Rights Reserved.
+        </p>
         <div className="flex gap-2 justify-end self-end">
-          <Link href={"/"} className="text-red-500">Privacy Policy</Link>
-          |
-          <Link href={"/"} className="text-red-500">Account Deletion</Link>
+          <p className="text-red-500">Privacy Policy</p>|
+          <p className="text-red-500">Account Deletion</p>
         </div>
       </footer>
     </>

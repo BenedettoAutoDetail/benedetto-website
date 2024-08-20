@@ -1,3 +1,4 @@
+import { HeroSection } from "@/components/shared";
 import ServiceProcedureCard from "@/components/shared/ServiceProcedureCard";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -20,7 +21,7 @@ const servicesList = [
         "Cloth Cleaning",
         "Plastics Cleaning",
         "Interior Coating: Coating All Interior Surfaces - Plastics, Vinyl, Leather, Trim. Super Hydrophobic Coating that Protects Leather, Vinyl, and Plastics against liquids and dirt stains without affecting the look, texture, or color of the coated surface.",
-        "Fabric & Cloth Coating: Coating All Carpets, Floor Mats, Cloth. Provides protection that makes fabrics waterproof and easy to clean, preventing soaking, swelling, or rotting."
+        "Fabric & Cloth Coating: Coating All Carpets, Floor Mats, Cloth. Provides protection that makes fabrics waterproof and easy to clean, preventing soaking, swelling, or rotting.",
       ],
     },
     notes: ["(Protection lasts Up to 3 Years.)"],
@@ -31,29 +32,13 @@ function InteriorCoating() {
   return (
     <div>
       {/* hero section  */}
-      <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
-        <div className="absolute inset-0 bg-[url('/images/Locate-a-Car-Detailing-Near-You.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 w-full text-center">
-          <h1
-            data-aos="fade-down"
-            className="text-white mt-32 text-2xl md:text-5xl font-bold"
-          >
-            Vehicle Interior Coating Service Near Ladera Ranch & Orange County,
-            CA
-          </h1>
-
-          <div
-            data-aos="fade-up"
-            className="flex justify-center text-white mt-1 text-md font_barlow font-semibold text-opacity-85 font_barlow"
-          >
-            <div className="flex gap-2 items-center">
-              Home
-              <FaLongArrowAltRight className="text-lg text-red-600" />
-              Interior Coating
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        bgImage={"/images/Locate-a-Car-Detailing-Near-You.jpg"}
+        title={
+          "Vehicle Interior Coating Service Near Ladera Ranch & Orange County, CA"
+        }
+        subtitle={"Interior Coating"}
+      />
 
       {/* Auto Detailing  */}
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
@@ -101,10 +86,16 @@ function InteriorCoating() {
       {/* services procedure  */}
       <div className="bg-red-500   p-10">
         <div className="text-white flex flex-col justify-center items-center m-5 mb-10">
-          <h1 data-aos="fade-down" className="mt-10 text-3xl md:text-5xl font-extrabold">
-          Vehicle Interior Coating Cost
+          <h1
+            data-aos="fade-down"
+            className="mt-10 text-3xl md:text-5xl font-extrabold"
+          >
+            Vehicle Interior Coating Cost
           </h1>
-          <h1 data-aos="fade-down" className="mt-4 text-lg md:text-2xl text-center md:text-start font-extrabold">
+          <h1
+            data-aos="fade-down"
+            className="mt-4 text-lg md:text-2xl text-center md:text-start font-extrabold"
+          >
             extra charge for large vehicle
           </h1>
         </div>

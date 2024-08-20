@@ -1,3 +1,4 @@
+import { HeroSection } from "@/components/shared";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
@@ -15,28 +16,13 @@ function Gallery({ showHeroSection = true }) {
     <div>
       {/* hero section  */}
       {showHeroSection && (
-        <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
-          <div className="absolute inset-0 bg-[url('/images/truck-driver-pointing-the-issue-to-his-mechanic.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-          <div className="relative z-10 p-10 w-full text-center">
-            <h1
-              data-aos="fade-down"
-              className="text-white mt-32 text-5xl font-bold"
-            >
-              Gallery
-            </h1>
-
-            <div
-              data-aos="fade-up"
-              className="flex justify-center text-white mt-1 text-md font_barlow font-semibold text-opacity-85 font_barlow"
-            >
-              <div className="flex gap-2 items-center">
-                Home
-                <FaLongArrowAltRight className="text-lg text-red-600" />
-                Gallery
-              </div>
-            </div>
-          </div>
-        </div>
+        <HeroSection
+          bgImage={
+            "/images/truck-driver-pointing-the-issue-to-his-mechanic.jpg"
+          }
+          title={"Gallery"}
+          subtitle={"Gallery"}
+        />
       )}
 
       <div className="bg-white text-black/90 flex flex-col items-center gap-2 pb-5">
@@ -44,9 +30,7 @@ function Gallery({ showHeroSection = true }) {
           Gallery
         </span>
 
-        <p
-          className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
-        >
+        <p className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]">
           Explore Our Gallery
         </p>
       </div>
@@ -54,7 +38,7 @@ function Gallery({ showHeroSection = true }) {
       <div className="bg-white grid grid-cols-1 md:grid-cols-3 gap-2 p-5 md:p-20">
         {galleryImages.map((image, index) => (
           <div key={index} className="w-full relative group" data-aos="fade-up">
-            <img src={image} alt="" className="w-full h-full" />
+            <img src={image} alt="" className="w-full h-full rounded-lg" />
             <div className="absolute inset-0 bg-red-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
           </div>
         ))}

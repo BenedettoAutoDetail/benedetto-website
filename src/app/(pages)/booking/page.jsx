@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { RxCross2 } from "react-icons/rx";
+import { HeroSection } from "@/components/shared";
 
 function Booking() {
   const [allServices, setAllServices] = useState([]);
@@ -90,9 +91,9 @@ function Booking() {
     toast.success(
       <div className="flex justify-between items-center bg-black text-white p-4 w-full">
         <p className="text-justify">
-          <span className="font-bold text-red-500">Note: </span>Please use the same email for
-          booking that you want to use to view your booking history on the
-          mobile app.
+          <span className="font-bold text-red-500">Note: </span>Please use the
+          same email for booking that you want to use to view your booking
+          history on the mobile app.
         </p>
         <button onClick={() => toast.dismiss()} className="ml-4">
           <RxCross2 className="h-5 w-5 text-gray-500" />
@@ -104,41 +105,23 @@ function Booking() {
         position: "bottom-right", // Set the toast location to bottom right
         style: {
           padding: 0, // Remove padding from the toast container
-          margin: 0,  // Remove margin from the toast container
+          margin: 0, // Remove margin from the toast container
           background: "black", // Ensure the background is black
         },
       }
     );
-  
+
     fetchServices();
   }, []);
-  
 
   return (
     <div className="bg-white">
       {/* hero section  */}
-      <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
-        <div className="absolute inset-0 bg-[url('/images/truck-driver-pointing-the-issue-to-his-mechanic.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 w-full text-center">
-          <h1
-            data-aos="fade-down"
-            className="text-white text-5xl font-bold"
-          >
-            Booking
-          </h1>
-
-          <div
-            data-aos="fade-up"
-            className="flex justify-center text-white mt-1 text-md font_barlow font-semibold text-opacity-85 font_barlow"
-          >
-            <div className="flex gap-2 items-center">
-              Home
-              <FaLongArrowAltRight className="text-lg text-red-600" />
-              Booking
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        bgImage={"/images/truck-driver-pointing-the-issue-to-his-mechanic.jpg"}
+        title={"Booking"}
+        subtitle={"Booking"}
+      />
 
       <div className="bg-white text-black flex flex-col items-center gap-2 pb-5">
         <span className="inline-block mt-20 text-2xl uppercase border-b-4 border-red-600">
@@ -216,7 +199,10 @@ function Booking() {
                 className={`mt-1 bg-white block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm ${
                   errors.date ? "border-red-500" : ""
                 }`}
-                inputProps={{ className: "bg-white text-black w-full px-3 py-2 focus:outline-none focus:ring-red-500 focus:border-red-500" }}
+                inputProps={{
+                  className:
+                    "bg-white text-black w-full px-3 py-2 focus:outline-none focus:ring-red-500 focus:border-red-500",
+                }}
                 timeFormat={false} // Optional: Disable time selection if you want only date
               />
               {errors.date && (
@@ -239,7 +225,10 @@ function Booking() {
                 className={`mt-1 bg-white block w-full border border-gray-300 rounded-md shadow-sm sm:text-sm ${
                   errors.time ? "border-red-500" : ""
                 }`}
-                inputProps={{ className: "bg-white text-black w-full px-3 py-2 focus:outline-none focus:ring-red-500 focus:border-red-500" }}
+                inputProps={{
+                  className:
+                    "bg-white text-black w-full px-3 py-2 focus:outline-none focus:ring-red-500 focus:border-red-500",
+                }}
                 dateFormat={false} // Optional: Disable date selection if you want only time
               />
               {errors.time && (

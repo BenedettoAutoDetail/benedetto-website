@@ -1,4 +1,4 @@
-import { ServiceCard } from "../../../../components/shared";
+import { HeroSection, ServiceCard } from "../../../../components/shared";
 import Link from "next/link";
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
@@ -34,32 +34,19 @@ const cardsdetail = [
   },
 ];
 
-function Services({showHeroSection=true}) {
+function Services({ showHeroSection = true }) {
   return (
     <div>
       {/* hero section  */}
-      {showHeroSection && <div className="relative min-h-[60vh] bg-black bg-center bg-no-repeat bg-cover">
-        <div className="absolute inset-0 bg-[url('/images/truck-driver-pointing-the-issue-to-his-mechanic.jpg')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 w-full text-center">
-          <h1
-            data-aos="fade-down"
-            className="text-white mt-32 text-5xl font-bold"
-          >
-            Services
-          </h1>
-
-          <div
-            data-aos="fade-up"
-            className="flex justify-center text-white mt-1 text-md font_barlow font-semibold text-opacity-85 font_barlow"
-          >
-            <div className="flex gap-2 items-center">
-              Home
-              <FaLongArrowAltRight className="text-lg text-red-600" />
-              Services
-            </div>
-          </div>
-        </div>
-      </div>}
+      {showHeroSection && (
+        <HeroSection
+          bgImage={
+            "/images/truck-driver-pointing-the-issue-to-his-mechanic.jpg"
+          }
+          title={"Services"}
+          subtitle={"Services"}
+        />
+      )}
 
       {/* service cards  */}
       <div className="bg-white text-black/90 flex flex-col items-center gap-2 pb-5">
