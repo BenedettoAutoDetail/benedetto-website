@@ -70,12 +70,12 @@ function Booking() {
       const encodedServicesString = encodeURIComponent(servicesString);
       const url = `/make-payment?data=${encodedServicesString}`;
       router.push(url);
+    } else{
+      toast.error("Error adding order, please try again");
     }
 
     // Clear the form fields after submission
     reset();
-
-    console.log(data);
   };
 
   const fetchServices = async () => {

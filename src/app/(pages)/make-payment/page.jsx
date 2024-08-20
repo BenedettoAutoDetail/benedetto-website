@@ -54,7 +54,7 @@ function PaymentContent() {
             const result = await makePayment(token.token, totalAmount);
 
             if (result) {
-              toast.success("Payment successful");
+              toast.success("Order placed successful");
               router.push("/booking");
               return;
             } else {

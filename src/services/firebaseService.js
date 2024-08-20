@@ -27,14 +27,12 @@ export const addServiceToFirebase = async (service) => {
   try {
     const newService = await addDoc(collection(db, "CART"), service);
 
-    if (newService) {
-      toast.success("Service added successfully");
-      return newService;
-    } else {
-      toast.error("Failed to add service");
+    if (!newService) {
       return false;
     }
+    return newService;
   } catch (error) {
     toast.error("Error adding a service");
+    return false;
   }
 };
