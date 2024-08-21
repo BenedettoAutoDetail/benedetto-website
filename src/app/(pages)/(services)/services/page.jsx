@@ -10,6 +10,7 @@ const cardsdetail = [
     description:
       "Welcome to Benedetto Auto Detail, your one-stop solution for premium auto detailing services. We are a team of experienced...",
     url: "/auto-detailing",
+    iconVideoSrc: "/videos/0lVW4c3VGL0RIs9Ad5.mp4"
   },
   {
     image: "/images/Ceramic_Coating_Application_SEO.jpg",
@@ -17,6 +18,8 @@ const cardsdetail = [
     description:
       "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
     url: "/ceramic-coating",
+    iconVideoSrc: "/videos/K93ci7841DV532yJ8u.mp4"
+
   },
   {
     image: "/images/Ceramic-Pro-Leather.jpg",
@@ -24,6 +27,8 @@ const cardsdetail = [
     description:
       "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
     url: "/interior-coating",
+    iconVideoSrc: "/videos/1Jnw4Nae2Bg39q.mp4"
+
   },
   {
     image: "/images/bl_01_576d8097-08a2-4503-b06b-a499c5e261f0.jpg",
@@ -31,6 +36,7 @@ const cardsdetail = [
     description:
       "Benedetto Auto Detail understands that your vehicle is an investment that you want to protect. That's why we offer the best...",
     url: "/paint-protection-film",
+    iconVideoSrc: "/videos/0lVW4c3VGL0RIs9Ad5.mp4"
   },
 ];
 
@@ -84,6 +90,7 @@ function Services({ showHeroSection = true, limit}) {
             <Link
               href={"/services"}
               className="btn bg-red-600 border-0 text-white hover:bg-red-600 hover:scale-110"
+              data-aos="fade-left"
             >
               All Services
             </Link>
@@ -92,13 +99,14 @@ function Services({ showHeroSection = true, limit}) {
       )}
 
       <div className="bg-white grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
-        {cardsToShow.map(({ image, title, description, url }) => (
+        {cardsToShow.map(({ image, title, description, url, iconVideoSrc }) => (
           <ServiceCard
             key={title}
             image={image}
             title={title}
             description={description}
             url={url}
+            IconVideoSrc={iconVideoSrc}
           />
         ))}
       </div>

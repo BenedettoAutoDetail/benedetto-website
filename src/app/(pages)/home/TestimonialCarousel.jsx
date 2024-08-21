@@ -32,7 +32,7 @@ const testimonials = [
 
 export function TestimonialCarousel() {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full px-6 md:px-0">
       <Carousel
         opts={{
           align: "start",
