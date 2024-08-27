@@ -44,9 +44,16 @@ function AboutUs({ showHeroSection = true }) {
             />
           </div>
           <div className="w-full mt-4">
-            <img
+            {/* <img
               src="/images/ceramic-coating-for-cars.jpg"
               alt=""
+              className="w-full rounded-lg shadow-xl"
+            /> */}
+            <video
+              src={'/videos/car-animation.json'}
+              autoPlay
+              loop
+              muted
               className="w-full rounded-lg shadow-xl"
             />
           </div>
