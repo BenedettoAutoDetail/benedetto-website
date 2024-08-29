@@ -1,12 +1,12 @@
 import React from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
-function AboutUsCard({ key = "1", title = "", description = "" }) {
+function AboutUsCard({ title = "", description = "" }) {
   return (
     <div
       data-aos="fade-right"
       className="grid grid-cols-[auto_1fr] bg-black/85 p-3 rounded-2xl font_barlow shadow-xl"
-      key={key}
+
     >
       <div className="">
         <IoMdCheckmarkCircleOutline className="text-5xl mx-2" />

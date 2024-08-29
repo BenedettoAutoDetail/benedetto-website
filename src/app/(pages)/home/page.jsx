@@ -4,6 +4,15 @@ import AboutUs from "../about-us/page";
 import Services from "../(services)/services/page";
 import Gallery from "../gallery/page";
 import { TestimonialCarousel } from "./TestimonialCarousel";
+import TypeWriter from "@/components/shared/TypeWriter";
+
+const typewriterStrings = [
+  "WELCOME TO BENEDETTO AUTO DETAIL - Best Car detailing Service in Town!",
+  "WELCOME TO BENEDETTO AUTO DETAIL - Auto Detailing",
+  "WELCOME TO BENEDETTO AUTO DETAIL - Ceramic Coating",
+  "WELCOME TO BENEDETTO AUTO DETAIL - Interior Coating",
+  "WELCOME TO BENEDETTO AUTO DETAIL - Paint Protection Film",
+];
 
 function Home() {
   return (
@@ -17,10 +26,15 @@ function Home() {
       <div className="relative min-h-screen bg-center bg-no-repeat bg-cover bg-black">
         <div className="absolute inset-0 bg-[url('/images/auto-detailing-scaled-1.png')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
         <div className="relative z-10 p-10 text-center md:text-start md:w-[85%]">
-          <span className="inline-block text-white mt-20 md:text-2xl uppercase border-b-4 border-red-600">
-            Welcome To BENEDETTO AUTO DETAIL - Best Car detailing Service in
-            Town Town
-          </span>
+
+          <TypeWriter
+            strings={typewriterStrings}
+            delay={2500}
+            speed={5}
+            deletionSpeed={40}
+            className="inline-block pe-3 transition-all text-white mt-20 md:text-2xl uppercase border-b-4 border-red-600"
+          />
+          
 
           <h1
             data-aos="fade-down"
@@ -59,14 +73,13 @@ function Home() {
       <Gallery showHeroSection={false} />
 
       <div className="bg-white pb-10">
-
-      <div className="bg-white flex flex-col justify-center items-center text-black p-10">
+        <div className="bg-white flex flex-col justify-center items-center text-black p-10">
           <span className="inline-block mt-20 text-2xl uppercase border-b-4 border-red-600">
-          Testimonials
+            Testimonials
           </span>
 
           <h1 data-aos="fade-down" className="mt-10 text-3xl font-extrabold">
-          What Clients Say About Our Car detailing Service?
+            What Clients Say About Our Car detailing Service?
           </h1>
         </div>
 

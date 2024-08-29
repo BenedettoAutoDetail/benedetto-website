@@ -138,9 +138,9 @@ function Booking() {
       </div>
 
       {/* book now  */}
-      <div className="min-h-[70vh] shadow-xl rounded-3xl grid grid-cols-1 md:grid-cols-[1fr_1fr] m-5 md:m-20 bg-[#f4f4f4] ">
+      <div className="min-h-[70vh] rounded-3xl grid grid-cols-1 md:grid-cols-[1fr_1fr] m-5 md:m-20 bg-white ">
         {/* left side  */}
-        <div className=" text-black p-10 " data-aos="fade-right">
+        <div className=" text-black shadow-xl rounded-3xl p-10 bg-[#f4f4f4]" data-aos="fade-right">
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name Field */}
             <div className="mb-4">
@@ -283,10 +283,19 @@ function Booking() {
 
         {/* right side  */}
         <div className="w-full hidden md:block" data-aos="fade-left">
-          <img
+          {/* <img
             src="/images/ceramic-coating-for-cars.jpg"
             alt=""
             className="w-full h-full rounded-3xl"
+          /> */}
+          <video
+            src="/videos/Hand showing Auto App.mp4" // Replace with the path to your video file
+            className="w-full h-full rounded-3xl"
+            autoPlay
+            loop
+            muted
+            playsInline // Ensures the video plays on mobile without needing user interaction
+            controls={false} // Set to true if you want to display video controls
           />
         </div>
       </div>

@@ -31,7 +31,7 @@ function AboutUs({ showHeroSection = true }) {
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
         {/* left side  */}
         <div className="p-10" data-aos="fade-right">
-          <div className="grid grid-cols-[1fr_1fr] gap-4">
+          {/* <div className="grid grid-cols-[1fr_1fr] gap-4">
             <img
               src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
               alt=""
@@ -44,19 +44,22 @@ function AboutUs({ showHeroSection = true }) {
             />
           </div>
           <div className="w-full mt-4">
-            {/* <img
+            <img
               src="/images/ceramic-coating-for-cars.jpg"
               alt=""
               className="w-full rounded-lg shadow-xl"
-            /> */}
-            <video
-              src={'/videos/car-animation.json'}
-              autoPlay
-              loop
-              muted
-              className="w-full rounded-lg shadow-xl"
             />
-          </div>
+          </div> */}
+
+          <video
+            src="/videos/Man doing Car Polishing.mp4" // Replace with the path to your video file
+            className="w-full h-full rounded-3xl"
+            autoPlay
+            loop
+            muted
+            playsInline // Ensures the video plays on mobile without needing user interaction
+            controls={false} // Set to true if you want to display video controls
+          />
         </div>
 
         {/* right side  */}
@@ -88,10 +91,10 @@ function AboutUs({ showHeroSection = true }) {
       </div>
 
       {/* why choose we  */}
-      <div className="min-h-[90vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-red-500">
+      <div className="min-h-[90vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-x-10 bg-red-500 p-10">
         {/* left side  */}
 
-        <div className="text-white p-10">
+        <div className="text-white">
           <span className="inline-block mt-20 text-2xl uppercase border-b-4 border-black">
             Why Choose Us
           </span>
@@ -124,12 +127,33 @@ function AboutUs({ showHeroSection = true }) {
         </div>
 
         {/* right side  */}
-        <div className="p-10">
-          <img
+        <div className="flex justify-center">
+          {/* <img
             src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
             alt=""
             className="w-full h-full rounded-lg shadow-xl"
-          />
+          /> */}
+
+          <div className="mockup-phone ">
+            {" "}
+            {/* Added bg-white to make the background white */}
+            <div className="camera"></div>
+            <div className="display">
+              <div className="artboard artboard-demo phone-1 p-0">
+                {" "}
+                {/* Removed padding to make the video take full width and height */}
+                <video
+                  src="/videos/Auto Mechanic spinning wheel in hand.mp4" // Replace with the path to your video file
+                  className="w-full h-full rounded-3xl object-cover" // Added object-cover to ensure the video covers the container fully
+                  autoPlay
+                  loop
+                  muted
+                  playsInline // Ensures the video plays on mobile without needing user interaction
+                  controls={false} // Set to true if you want to display video controls
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

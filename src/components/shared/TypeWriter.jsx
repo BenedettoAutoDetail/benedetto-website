@@ -1,23 +1,23 @@
-import React from 'react'
-import Typed from 'react-typed';
+import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
-function TypeWriter() {
+function TypeWriter({ strings=[], delay = 1500, speed = 60, deletionSpeed = 40, className='text-white text-xl' }) {
+  // Flatten the sequence by inserting the delay after each string
+  const sequence = strings.reduce((acc, str) => [...acc, str, delay], []);
+
   return (
-    <div>
-      <Typed
-        strings={['Hello world!', 'Welcome to react-typed.', 'Customize your typing effect.']}
-        typeSpeed={60}
-        backSpeed={40}
-        startDelay={500}
-        backDelay={1500}
-        fadeOut={true}
-        loop={true}
-        showCursor={true}
-        cursorChar={'_'}
-        onComplete={() => console.log('Typing complete')}
+    <div className={className}>
+      <TypeAnimation
+        sequence={sequence}
+        speed={speed}
+        deletionSpeed={deletionSpeed}
+        wrapper="span"
+        cursor={true}
+        repeat={Infinity}
+        style={{ display: "inline-block" }}
       />
     </div>
-  )
+  );
 }
 
-export default TypeWriter
+export default TypeWriter;

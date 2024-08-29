@@ -26,7 +26,7 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^5.3.0",
     "react-square-web-payments-sdk": "^3.2.1",
-    "react-typed": "^2.0.12",
+    "react-type-animation": "^3.2.0",
     "square": "^37.1.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"

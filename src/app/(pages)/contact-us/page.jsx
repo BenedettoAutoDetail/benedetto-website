@@ -97,9 +97,9 @@ function ContactUs() {
       </div>
 
       {/* contact form  */}
-      <div className="min-h-[80vh] rounded-3xl grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-[#f4f4f4] m-5 shadow-xl md:m-20">
+      <div className="min-h-[80vh] rounded-3xl grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white m-5 md:m-20">
         {/* left side  */}
-        <div className=" text-black p-5 md:p-10" data-aos="fade-right">
+        <div className=" text-black rounded-3xl shadow-xl bg-[#f4f4f4] p-5 md:p-10" data-aos="fade-right">
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Name Field */}
             <div className="mb-4">
@@ -196,10 +196,20 @@ function ContactUs() {
 
         {/* right side  */}
         <div className="w-full hidden md:block" data-aos="fade-left">
-          <img
+          {/* <img
             src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
             alt=""
             className="w-full h-full rounded-3xl"
+          /> */}
+
+          <video
+            src="/videos/Auto Mechanic spinning wheel in hand.mp4" // Replace with the path to your video file
+            className="w-full h-full rounded-3xl"
+            autoPlay
+            loop
+            muted
+            playsInline // Ensures the video plays on mobile without needing user interaction
+            controls={false} // Set to true if you want to display video controls
           />
         </div>
       </div>
