@@ -102,13 +102,8 @@ function AboutUs({ showHeroSection = true }) {
 
         {/* right side  */}
         <div className="flex justify-center">
-          {/* <img
-            src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
-            alt=""
-            className="w-full h-full rounded-lg shadow-xl"
-          /> */}
 
-          <div className="mockup-phone ">
+          <div className="mockup-phone mt-5 sm:mt-0">
             {" "}
             {/* Added bg-white to make the background white */}
             <div className="camera"></div>
