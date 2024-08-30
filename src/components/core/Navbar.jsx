@@ -23,7 +23,7 @@ const servicesMenu = [
 
 function Navbar() {
   return (
-    <div className="navbar bg-base-100 font_barlow p-10 flex justify-between">
+    <div className="navbar bg-base-100 font_barlow p-10 flex justify-between max-h-[4vh] max-w-[80vw] rounded-3xl fixed top-1 left-0 right-0 mx-auto z-50 mt-5">
       {/* Navbar start */}
       <div className="navbar-start">
         {/* Burger icon on the small screens */}

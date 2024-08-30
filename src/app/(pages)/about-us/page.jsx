@@ -1,5 +1,7 @@
 import { AboutUsCard, HeroSection } from "../../../components/shared";
 import React from "react";
+import Lottie from "lottie-react";
+import carPolishAnimationUrl from "../../../../public/videos/Man doing Car Polishing.json";
 
 const cardsDetail = [
   {
@@ -31,35 +33,7 @@ function AboutUs({ showHeroSection = true }) {
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
         {/* left side  */}
         <div className="p-10" data-aos="fade-right">
-          {/* <div className="grid grid-cols-[1fr_1fr] gap-4">
-            <img
-              src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
-              alt=""
-              className="rounded-lg shadow-xl"
-            />
-            <img
-              src="/images/Locate-a-Car-Detailing-Near-You.jpg"
-              alt=""
-              className="h-full rounded-lg shadow-xl"
-            />
-          </div>
-          <div className="w-full mt-4">
-            <img
-              src="/images/ceramic-coating-for-cars.jpg"
-              alt=""
-              className="w-full rounded-lg shadow-xl"
-            />
-          </div> */}
-
-          <video
-            src="/videos/Man doing Car Polishing.mp4" // Replace with the path to your video file
-            className="w-full h-full rounded-3xl"
-            autoPlay
-            loop
-            muted
-            playsInline // Ensures the video plays on mobile without needing user interaction
-            controls={false} // Set to true if you want to display video controls
-          />
+          <Lottie animationData={carPolishAnimationUrl} loop={true} autoPlay={true} />
         </div>
 
         {/* right side  */}

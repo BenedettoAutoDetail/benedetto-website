@@ -5,6 +5,8 @@ import Services from "../(services)/services/page";
 import Gallery from "../gallery/page";
 import { TestimonialCarousel } from "./TestimonialCarousel";
 import TypeWriter from "@/components/shared/TypeWriter";
+import Lottie from "lottie-react";
+import carRepairAnimationUrl from "../../../../public/videos/Automatic Car Wash.json";
 
 const typewriterStrings = [
   "WELCOME TO BENEDETTO AUTO DETAIL - Best Car detailing Service in Town!",
@@ -23,47 +25,61 @@ function Home() {
       }}
     >
       {/* hero section  */}
-      <div className="relative min-h-screen bg-center bg-no-repeat bg-cover bg-black">
+      <div className="relative min-h-screen bg-center bg-no-repeat bg-cover bg-black ">
         <div className="absolute inset-0 bg-[url('/images/auto-detailing-scaled-1.png')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
-        <div className="relative z-10 p-10 text-center md:text-start md:w-[85%]">
+        <div className="relative z-10 text-center md:text-start">
+          <div className="w-full h-full grid grid-cols-1 md:grid-cols-[3fr_1fr] pt-32 px-5">
+            <div className="md:ps-10 p-2">
+              <TypeWriter
+                strings={typewriterStrings}
+                delay={2500}
+                speed={5}
+                deletionSpeed={40}
+                className="inline-block pe-3 transition-all text-white mt-20 md:text-2xl uppercase border-b-4 border-red-600"
+              />
 
-          <TypeWriter
-            strings={typewriterStrings}
-            delay={2500}
-            speed={5}
-            deletionSpeed={40}
-            className="inline-block pe-3 transition-all text-white mt-20 md:text-2xl uppercase border-b-4 border-red-600"
-          />
-          
+              <h1
+                data-aos="fade-down"
+                className="text-white mt-10 text-2xl md:text-5xl font-extrabold"
+              >
+                Ladera Ranch Based Car Detailing Experts Serving All Across
+                Orange County, California
+              </h1>
 
-          <h1
-            data-aos="fade-down"
-            className="text-white mt-10 text-2xl md:text-5xl font-extrabold"
-          >
-            Ladera Ranch Based Car Detailing Experts Serving All Across Orange
-            County, California
-          </h1>
+              <p
+                data-aos="fade-up"
+                className="text-white mt-10 md:mt-1 text-justify md:text-start md:text-lg font-semibold text-opacity-85 font_barlow"
+              >
+                Benedetto Auto Detail has been serving the market with more than
+                a decade through premium coating and auto detailing services in
+                town Orange County. If you are in or Near Orange County,
+                California and looking for a auto detailing or paint protection
+                service-provider then look no further, Because Benedetto has the
+                experts of the field with years of professional knowhow. We are
+                located in Ladera Ranch, CA and serving all across the Orange
+                County.
+              </p>
 
-          <p
-            data-aos="fade-up"
-            className="text-white mt-10 md:mt-1 text-justify md:text-start md:text-lg font-semibold text-opacity-85 font_barlow"
-          >
-            Benedetto Auto Detail has been serving the market with more than a
-            decade through premium coating and auto detailing services in town
-            Orange County. If you are in or Near Orange County, California and
-            looking for a auto detailing or paint protection service-provider
-            then look no further, Because Benedetto has the experts of the field
-            with years of professional knowhow. We are located in Ladera Ranch,
-            CA and serving all across the Orange County.
-          </p>
+              <div data-aos="fade-right" className="mt-10">
+                <Link
+                  href={"/booking"}
+                  className="btn bg-red-600 text-white text-xl w-40 border-0 hover:bg-red-600 hover:scale-110"
+                >
+                  Book Now
+                </Link>
+              </div>
+            </div>
 
-          <div data-aos="fade-right" className="mt-10">
-            <Link
-              href={"/booking"}
-              className="btn bg-red-600 text-white text-xl w-40 border-0 hover:bg-red-600 hover:scale-110"
+            <div
+              className="w-[25rem] h-[25rem] hidden md:flex items-center bg-red-600 rounded-full mt-20"
+              data-aos="fade-right"
             >
-              Book Now
-            </Link>
+              <Lottie
+                animationData={carRepairAnimationUrl}
+                loop={true}
+                autoPlay={true}
+              />
+            </div>
           </div>
         </div>
       </div>
