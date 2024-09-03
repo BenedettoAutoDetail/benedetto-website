@@ -1,29 +1,42 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 const servicesMenu = [
-  {
-    title: "Auto Detailing",
-    url: "/auto-detailing",
-  },
-  {
-    title: "Ceramic Coating",
-    url: "/ceramic-coating",
-  },
-  {
-    title: "Interior Coating",
-    url: "/interior-coating",
-  },
-  {
-    title: "Paint Protection Film",
-    url: "/paint-protection-film",
-  },
+  { title: "Auto Detailing", url: "/auto-detailing" },
+  { title: "Ceramic Coating", url: "/ceramic-coating" },
+  { title: "Interior Coating", url: "/interior-coating" },
+  { title: "Paint Protection Film", url: "/paint-protection-film" },
 ];
 
 function Navbar() {
+  const [isServicesOpen, setServicesOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const servicesButtonRef = useRef(null);
+
+  useEffect(() => {
+    // Function to handle clicks outside the dropdown
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        !servicesButtonRef.current.contains(event.target)
+      ) {
+        setServicesOpen(false);
+      }
+    };
+
+    // Attach event listener
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="navbar bg-base-100 font_barlow p-10 flex justify-between max-h-[4vh] max-w-[80vw] rounded-3xl fixed top-1 left-0 right-0 mx-auto z-50 mt-5">
+    <div className="navbar bg-black/60 font_barlow p-10 flex justify-between max-h-[4vh] max-w-[80vw] rounded-3xl fixed top-1 left-0 right-0 mx-auto z-50 mt-5">
       {/* Navbar start */}
       <div className="navbar-start">
         {/* Burger icon on the small screens */}
@@ -46,7 +59,7 @@ function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow text-red-500 z-20"
+            className="menu menu-sm bg-black/90 dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow text-red-500 z-20"
           >
             <li>
               <Link href={"/"}>Home</Link>
@@ -56,7 +69,11 @@ function Navbar() {
             </li>
             <li>
               <div className="dropdown">
-                <Link href={"/services"} className="flex justify-between">
+                <button
+                  ref={servicesButtonRef}
+                  onClick={() => setServicesOpen(!isServicesOpen)}
+                  className="flex justify-between w-full"
+                >
                   Services
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,14 +89,19 @@ function Navbar() {
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </Link>
-                <ul className="p-2 mt-2 hidden group-hover:block bg-base-100 rounded-box shadow z-20">
-                  {servicesMenu.map((service) => (
-                    <li key={service.title}>
-                      <Link href={service.url}>{service.title}</Link>
-                    </li>
-                  ))}
-                </ul>
+                </button>
+                {isServicesOpen && (
+                  <ul
+                    ref={dropdownRef}
+                    className="p-2 mt-2 bg-black/90 rounded-box shadow z-40 absolute top-4 left-[-.6rem]"
+                  >
+                    {servicesMenu.map((service) => (
+                      <li key={service.title}>
+                        <Link href={service.url}>{service.title}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </li>
             <li>
@@ -129,7 +151,7 @@ function Navbar() {
             <Link href={"/services"} className="px-20 w-full">
               Services
             </Link>
-            <ul className="absolute border-0 top-7 left-[-1.8rem] p-2 w-[15rem] bg-base-100 rounded-box shadow mt-2 hidden group-hover:block z-20">
+            <ul className="absolute bg-black/100 border-0 top-7 left-0 p-2 w-[15rem] bg-base-100 rounded-box shadow mt-2 hidden group-hover:block z-20">
               {servicesMenu.map((service) => (
                 <li key={service.title}>
                   <Link href={service.url} className="w-full">

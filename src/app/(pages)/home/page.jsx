@@ -5,8 +5,7 @@ import Services from "../(services)/services/page";
 import Gallery from "../gallery/page";
 import { TestimonialCarousel } from "./TestimonialCarousel";
 import TypeWriter from "@/components/shared/TypeWriter";
-import Lottie from "lottie-react";
-import carRepairAnimationUrl from "../../../../public/videos/Automatic Car Wash.json";
+import MediaPlayer from "@/components/shared/MediaPlayer";
 
 const typewriterStrings = [
   "WELCOME TO BENEDETTO AUTO DETAIL - Best Car detailing Service in Town!",
@@ -74,11 +73,8 @@ function Home() {
               className="w-[25rem] h-[25rem] hidden md:flex items-center bg-red-600 rounded-full mt-20"
               data-aos="fade-right"
             >
-              <Lottie
-                animationData={carRepairAnimationUrl}
-                loop={true}
-                autoPlay={true}
-              />
+
+              <MediaPlayer src={'/videos/Automatic Car Wash.json'} />
             </div>
           </div>
         </div>

@@ -1,6 +1,5 @@
 import { HeroSection } from "@/components/shared";
 import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
 
 const galleryImages = [
   "/images/10bea6_02ccb98b176c4e05b03aee7c30187710_mv2.webp",

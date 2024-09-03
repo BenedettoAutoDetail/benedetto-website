@@ -1,7 +1,6 @@
 import { AboutUsCard, HeroSection } from "../../../components/shared";
 import React from "react";
-import Lottie from "lottie-react";
-import carPolishAnimationUrl from "../../../../public/videos/Man doing Car Polishing.json";
+import MediaPlayer from "@/components/shared/MediaPlayer";
 
 const cardsDetail = [
   {
@@ -33,7 +32,7 @@ function AboutUs({ showHeroSection = true }) {
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] bg-white">
         {/* left side  */}
         <div className="p-10" data-aos="fade-right">
-          <Lottie animationData={carPolishAnimationUrl} loop={true} autoPlay={true} />
+          <MediaPlayer src={'/videos/Man doing Car Polishing.json'}/>
         </div>
 
         {/* right side  */}

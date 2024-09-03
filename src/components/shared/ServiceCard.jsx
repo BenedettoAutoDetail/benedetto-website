@@ -26,7 +26,7 @@ function ServiceCard({ image = "", title = "", description = "", url = "", IconV
           autoPlay
           loop
           muted
-          className="absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16"
+          className="absolute top-1/3 left-1/4 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16"
           style={{
             objectFit: "cover",
             borderRadius: "50%",
