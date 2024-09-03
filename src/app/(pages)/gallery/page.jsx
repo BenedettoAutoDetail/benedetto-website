@@ -1,14 +1,6 @@
 import { HeroSection } from "@/components/shared";
+import { LayoutGrid } from "@/components/ui/layout-grid";
 import React from "react";
-
-const galleryImages = [
-  "/images/10bea6_02ccb98b176c4e05b03aee7c30187710_mv2.webp",
-  "/images/shutterstock_1447469384-1-1080x608-1.jpg",
-  "/images/IMG_20170604_003947.webp",
-  "/images/bl_01_576d8097-08a2-4503-b06b-a499c5e261f0.jpg",
-  "/images/Ceramic-Pro-Leather.jpg",
-  "/images/Locate-a-Car-Detailing-Near-You.jpg",
-];
 
 function Gallery({ showHeroSection = true }) {
   return (
@@ -34,16 +26,95 @@ function Gallery({ showHeroSection = true }) {
         </p>
       </div>
 
-      <div className="bg-white grid grid-cols-1 md:grid-cols-3 gap-2 p-5 md:p-20">
-        {galleryImages.map((image, index) => (
-          <div key={index} className="w-full relative group" data-aos="fade-up">
-            <img src={image} alt="" className="w-full h-full rounded-lg" />
-            <div className="absolute inset-0 bg-red-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-          </div>
-        ))}
+      <div className="h-screen py-10 w-full bg-white">
+        <LayoutGrid cards={cards} />
       </div>
     </div>
   );
 }
 
 export default Gallery;
+
+const SkeletonOne = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl text-white">Auto Detailing</p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        Welcome to Benedetto Auto Detail, your one-stop solution for premium
+        auto detailing services. We are a team of experienced...
+      </p>
+    </div>
+  );
+};
+
+const SkeletonTwo = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl text-white">
+        Ceramic Coating
+      </p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection,
+        Scratch & Swirls Resistant. This Coating Provides...
+      </p>
+    </div>
+  );
+};
+const SkeletonThree = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl text-white">
+        Interior Coating
+      </p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        LEATHER GUARD COATING is made out of nanotechnology and is a Super
+        Hydro-Phobic Coating that Protects, Leather...
+      </p>
+    </div>
+  );
+};
+const SkeletonFour = () => {
+  return (
+    <div>
+      <p className="font-bold md:text-4xl text-xl text-white">
+        Paint Protection Film
+      </p>
+      <p className="font-normal text-base text-white"></p>
+      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
+        Benedetto Auto Detail understands that your vehicle is an investment
+        that you want to protect. That’s why we offer the best paint protection
+        film services to keep your car’s paint looking like new.
+      </p>
+    </div>
+  );
+};
+
+const cards = [
+  {
+    id: 1,
+    content: <SkeletonOne />,
+    className: "md:col-span-2",
+    thumbnail: "/images/10bea6_02ccb98b176c4e05b03aee7c30187710_mv2.webp",
+  },
+  {
+    id: 2,
+    content: <SkeletonTwo />,
+    className: "col-span-1",
+    thumbnail: "/images/shutterstock_1447469384-1-1080x608-1.jpg",
+  },
+  {
+    id: 3,
+    content: <SkeletonThree />,
+    className: "col-span-1",
+    thumbnail: "/images/IMG_20170604_003947.webp",
+  },
+  {
+    id: 4,
+    content: <SkeletonFour />,
+    className: "md:col-span-2",
+    thumbnail: "/images/bl_01_576d8097-08a2-4503-b06b-a499c5e261f0.jpg",
+  },
+];

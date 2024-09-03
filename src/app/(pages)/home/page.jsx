@@ -27,8 +27,8 @@ function Home() {
       <div className="relative min-h-screen bg-center bg-no-repeat bg-cover bg-black ">
         <div className="absolute inset-0 bg-[url('/images/auto-detailing-scaled-1.png')] bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"></div>
         <div className="relative z-10 text-center md:text-start">
-          <div className="w-full h-full grid grid-cols-1 md:grid-cols-[3fr_1fr] pt-32 px-5">
-            <div className="md:ps-10 p-2">
+          <div className="w-full h-full flex flex-col md:flex-row pt-32 px-5 ">
+            <div className="md:grow-3 order-2 md:order-1 md:ps-10 p-2">
               <TypeWriter
                 strings={typewriterStrings}
                 delay={2500}
@@ -70,7 +70,7 @@ function Home() {
             </div>
 
             <div
-              className="w-[25rem] h-[25rem] hidden md:flex items-center bg-red-600 rounded-full mt-20"
+              className="md:grow-1 w-full h-full order-1 md:order-2 items-center bg-red-600 rounded-full mt-10 md:mt-20"
               data-aos="fade-right"
             >
 

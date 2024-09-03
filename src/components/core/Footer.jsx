@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { MdOutlinePhoneInTalk, MdOutlineMailOutline } from "react-icons/md";
@@ -5,6 +6,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { CiFacebook } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io5";
 import { AiOutlineYoutube } from "react-icons/ai";
+import { motion } from "framer-motion";
+import { FaCarSide } from "react-icons/fa6";
 
 function Footer() {
   return (
@@ -143,9 +146,19 @@ function Footer() {
         </nav>
       </footer>
 
+      <div className="relative mt-8 overflow-hidden h-10 bg-transparent border-b border-gray-500">
+        <motion.div
+          className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center "
+          animate={{ x: ["-100%", "100%"] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        >
+          <FaCarSide className="text-5xl text-red-600" />
+        </motion.div>
+      </div>
+
       <footer
         data-aos="fade-right"
-        className="footer bg-base-200 text-base-content border-t-2 border-slate-700 flex flex-col p-5"
+        className="footer bg-base-200 text-base-content flex flex-col p-5"
       >
         <p className="text-start text-red-500">
           Copyright © 2023, Benedetto Auto Detail. All Rights Reserved.

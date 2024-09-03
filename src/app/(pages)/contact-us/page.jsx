@@ -6,6 +6,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { HeroSection } from "@/components/shared";
+import MediaPlayer from "@/components/shared/MediaPlayer";
 
 function ContactUs() {
   const {
@@ -196,21 +197,7 @@ function ContactUs() {
 
         {/* right side  */}
         <div className="w-full hidden md:block" data-aos="fade-left">
-          {/* <img
-            src="/images/is-ceramic-coating-better-than-applying-car-wax-6144564716152.jpg"
-            alt=""
-            className="w-full h-full rounded-3xl"
-          /> */}
-
-          <video
-            src="/videos/Auto Mechanic spinning wheel in hand.mp4" // Replace with the path to your video file
-            className="w-full h-full rounded-3xl"
-            autoPlay
-            loop
-            muted
-            playsInline // Ensures the video plays on mobile without needing user interaction
-            controls={false} // Set to true if you want to display video controls
-          />
+        <MediaPlayer src={'/videos/Man doing Tyre Change.json'} />
         </div>
       </div>
 

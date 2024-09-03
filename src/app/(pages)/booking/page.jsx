@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { FaLongArrowAltRight } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";

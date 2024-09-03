@@ -36,7 +36,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="navbar bg-black/70 font_barlow p-10 flex justify-between max-h-[4vh] max-w-[80vw] rounded-3xl fixed top-1 left-0 right-0 mx-auto z-50 mt-5">
+    <div className="navbar bg-base-200 font_barlow p-10 flex justify-between max-h-[4vh] max-w-[80vw] rounded-3xl fixed top-1 left-0 right-0 mx-auto z-50 mt-5">
       {/* Navbar start */}
       <div className="navbar-start">
         {/* Burger icon on the small screens */}
@@ -59,7 +59,7 @@ function Navbar() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm bg-black/90 dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow text-red-500 z-20"
+            className="menu menu-sm bg-base-200 dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow text-red-500 z-20"
           >
             <li>
               <Link href={"/"}>Home</Link>
@@ -93,7 +93,7 @@ function Navbar() {
                 {isServicesOpen && (
                   <ul
                     ref={dropdownRef}
-                    className="p-2 mt-2 bg-black/90 rounded-box shadow z-40 absolute top-4 left-[-.6rem]"
+                    className="p-2 mt-2 bg-base-200 rounded-box shadow z-40 absolute top-4 left-[-.6rem]"
                   >
                     {servicesMenu.map((service) => (
                       <li key={service.title}>
@@ -151,7 +151,7 @@ function Navbar() {
             <Link href={"/services"} className="px-20 w-full">
               Services
             </Link>
-            <ul className="absolute bg-black/100 border-0 top-7 left-0 p-2 w-[15rem] bg-base-100 rounded-box shadow mt-2 hidden group-hover:block z-20">
+            <ul className="absolute bg-base-200 border-0 top-7 left-0 p-2 w-[15rem] bg-base-100 rounded-box shadow mt-2 hidden group-hover:block z-20">
               {servicesMenu.map((service) => (
                 <li key={service.title}>
                   <Link href={service.url} className="w-full">
