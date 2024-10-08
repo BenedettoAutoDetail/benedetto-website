@@ -3,6 +3,7 @@ import ServiceProcedureCard from "@/components/shared/ServiceProcedureCard";
 import React from "react";
 
 const servicesList = [
+
   {
     title: "Wash & Wax Detail Service",
     price: "100",
@@ -27,10 +28,54 @@ const servicesList = [
       "Upgrade to Ceramic Wax (Hybrid Sealant ) for an extra $60 to $100 Depending on the size of the Vehicle.",
     ],
   },
+  
+  {
+    title: "Two Cars Minimum Cleaning Wash Service (Ladera Ranch Exclusive)",
+    price: "120",
+    procedure: {
+      "Exterior Includes": [
+        "Exterior Wash",
+        "Hand & Air Dry",
+        "Wheel Brightening",
+        "Tires & Plastic Dressing",
+        "Windows Cleaning",
+      ],
+      "Interior Includes": [
+        "Full Interior Vacuumed",
+        "Shampoo Floor Mats",
+        "Dash Board Cleaning",
+        "Middle Console Cleaning",
+        "Cup Holder Cleaning",
+      ],
+    },
+    notes: [
+      "Extra charge for big vehicles",
+    ],
+  },
+
+  {
+    title: "Interior Detail Service",
+    price: "225",
+    procedure: {
+      "Interior Includes": [
+        "Complete Interior Vacuuming (Seats, Carpets, and Trunk)",
+        "Shampooing of All Carpets and Floor Mats",
+        "Deep Cleaning and Conditioning of Leather or Fabric Seats",
+        "Dashboard and Door Panels Cleaning & Conditioning",
+        "Detailed Cleaning of Vents, Knobs, and Buttons",
+        "Middle Console and Cup Holder Cleaning",
+        "Interior Windows Cleaning (Streak-Free Finish)",
+        "Odor Removal and Fresh Scent Application",
+      ],
+    },
+    notes: [
+      "Charges may vary depending on the side and condition of the Vehicle",
+    ],
+  },
 
   {
     title: "Exterior Clay Bar Detail Service",
-    price: "180",
+    price: "200",
     procedure: {
       "Exterior Includes": [
         "Exterior Wash",
@@ -52,12 +97,13 @@ const servicesList = [
     },
     notes: [
       "Upgrade to Ceramic Wax (Hybrid Sealant ) for an extra $60 to $100 Depending on the size of the Vehicle.",
+      "Charges may vary depending on the side and condition of the Vehicle",
     ],
   },
 
   {
     title: "Complete Detail Service",
-    price: "300",
+    price: "350",
     procedure: {
       "Exterior Includes": [
         "Exterior Wash",
@@ -80,7 +126,34 @@ const servicesList = [
     },
     notes: [
       "Upgrade to Ceramic Wax (Hybrid Sealant ) for an extra $60 to $100 Depending on the size of the Vehicle.",
+      "Charges may vary depending on the side and condition of the Vehicle"
     ],
+  },
+
+  {
+    title: "Sealant Service Protection",
+    price: "500",
+    procedure: {
+      "Exterior Includes": [
+        "Exterior Wash",
+        "Wheel Brightening",
+        "Tires & Plastics Dressing",
+        "Tree Sap & Water Spot Removal",
+      ],
+      Plus: [
+        "Full Stage of Clay Bar. (The Clay Bar Will Remove All Oxidation Making The Vehicle Ready For The Next Step.)",
+        "Full Stage Of Machine Polish On The Paint. In This First Stage, The Polish Will Correct The Paint From: Surface Scratches That The Vehicle May Have, The Swirl Marks On The Paint, Spider Webs Reflection, Paint Defection, Enhance Paint Finished Look.",
+        "Full Layer of Sealant G-Techniq Exo V4. In This Last Stage, the Sealant is Applied by Hand, On The Surface of the Paint To Enhance Maximum Protection and Durability On The Paint. (Protection lasts 12 months.)",
+      ],
+      "Interior Includes": [
+        "Full Interior Vacuumed",
+        "Shampoo Floor Mats",
+        "Dash Board Cleaning",
+        "Middle Console Cleaning",
+        "Cup Holder Cleaning",
+      ],
+    },
+    notes: [],
   },
 
   {
@@ -110,31 +183,7 @@ const servicesList = [
     notes: ["Extra Charge for Larger Vehicles. Call for an estimate."],
   },
 
-  {
-    title: "Sealant Service Protection",
-    price: "500",
-    procedure: {
-      "Exterior Includes": [
-        "Exterior Wash",
-        "Wheel Brightening",
-        "Tires & Plastics Dressing",
-        "Tree Sap & Water Spot Removal",
-      ],
-      Plus: [
-        "Full Stage of Clay Bar. (The Clay Bar Will Remove All Oxidation Making The Vehicle Ready For The Next Step.)",
-        "Full Stage Of Machine Polish On The Paint. In This First Stage, The Polish Will Correct The Paint From: Surface Scratches That The Vehicle May Have, The Swirl Marks On The Paint, Spider Webs Reflection, Paint Defection, Enhance Paint Finished Look.",
-        "Full Layer of Sealant G-Techniq Exo V4. In This Last Stage, the Sealant is Applied by Hand, On The Surface of the Paint To Enhance Maximum Protection and Durability On The Paint. (Protection lasts 12 months.)",
-      ],
-      "Interior Includes": [
-        "Full Interior Vacuumed",
-        "Shampoo Floor Mats",
-        "Dash Board Cleaning",
-        "Middle Console Cleaning",
-        "Cup Holder Cleaning",
-      ],
-    },
-    notes: [],
-  },
+ 
 ];
 
 function AutoDetailing() {

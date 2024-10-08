@@ -27,7 +27,7 @@ function ServiceProcedureCard({ service = {} }) {
 
       <ul className="list-disc p-6">
         {
-          service.notes.map((note, index) => (
+          service?.notes?.map((note, index) => (
             <li key={index} className="mt-4 text-red-500 text-justify capitalize">
               {note}
             </li>
