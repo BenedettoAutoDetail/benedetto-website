@@ -116,13 +116,13 @@ function Footer() {
           <div className="cursor-pointer">
             <div className="flex gap-x-2 items-center">
               <MdOutlinePhoneInTalk className="text-lg" />
-              <p>927-7234874</p>
+              <p>949 201 9253</p>
             </div>
           </div>
           <div className="cursor-pointer">
             <div className="flex gap-x-2 items-center">
               <MdOutlineMailOutline className="text-lg" />
-              <p>benedetto@gmail.com</p>
+              <p>benedettoautodetail@gmail.com</p>
             </div>
           </div>
           <div className="cursor-pointer">
